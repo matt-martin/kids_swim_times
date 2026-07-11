@@ -1,0 +1,4178 @@
+{
+  "fetchedAt": "2026-07-11T20:04:34.158Z",
+  "swimmers": [
+    {
+      "id": "oliver",
+      "name": "Oliver",
+      "sourceUrl": "https://www.acornswim.com/Database/search/indsearch.php?swimmernames=MARTIN%2C+OLIVER+%28MEAD%29&year%5B%5D=2026&year%5B%5D=2025&year%5B%5D=2024&year%5B%5D=2023&year%5B%5D=2022&year%5B%5D=2021&year%5B%5D=2020&year%5B%5D=2019&year%5B%5D=2018&yearselect=more&league=OMPA",
+      "events": {
+        "freestyle": [
+          {
+            "date": "2022-06-11",
+            "seconds": 57.46,
+            "distance": 25,
+            "sourceTime": "57.46Y",
+            "meet": "CCC_AT_MEAD_06112022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-22",
+            "seconds": 45.22,
+            "distance": 25,
+            "sourceTime": "45.22Y",
+            "meet": "MEAD_AT_SH_06222022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-10",
+            "seconds": 44.95,
+            "distance": 25,
+            "sourceTime": "44.95Y",
+            "meet": "MEADOW_MINI_2022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-16",
+            "seconds": 39.88,
+            "distance": 25,
+            "sourceTime": "39.88Y",
+            "meet": "MEAD_AT_OCC_07162022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 39.06,
+            "distance": 25,
+            "sourceTime": "39.06Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-30",
+            "seconds": 46.09,
+            "distance": 25,
+            "sourceTime": "46.09Y",
+            "meet": "OMPA_2022",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2023-05-13",
+            "seconds": 30.49,
+            "distance": 25,
+            "sourceTime": "30.49Y",
+            "meet": "MEAD_TTRIALS_05132023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-03",
+            "seconds": 33.39,
+            "distance": 25,
+            "sourceTime": "37.06M",
+            "meet": "MEAD_AT_CCC_06032023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 29.66,
+            "distance": 25,
+            "sourceTime": "29.66Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 27.09,
+            "distance": 25,
+            "sourceTime": "27.09Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-01",
+            "seconds": 29.1,
+            "distance": 25,
+            "sourceTime": "29.10Y",
+            "meet": "LTST_AT_MEAD_07012023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-09",
+            "seconds": 30.43,
+            "distance": 25,
+            "sourceTime": "30.43Y",
+            "meet": "MEADOW_MINI_2023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 27.68,
+            "distance": 25,
+            "sourceTime": "27.68Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 25.69,
+            "distance": 25,
+            "sourceTime": "25.69Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-16",
+            "seconds": 26.55,
+            "distance": 25,
+            "sourceTime": "26.55Y",
+            "meet": "SLEEPYB_2023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 27.07,
+            "distance": 25,
+            "sourceTime": "27.07Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-29",
+            "seconds": 26.39,
+            "distance": 25,
+            "sourceTime": "26.39Y",
+            "meet": "OMPA_2023",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 61.15,
+            "distance": 50,
+            "sourceTime": "1:01.15Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-05",
+            "seconds": 56.2,
+            "distance": 50,
+            "sourceTime": "56.20Y",
+            "meet": "LTST_AT_MEAD_06052024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 61.42,
+            "distance": 50,
+            "sourceTime": "1:01.42Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 61.53,
+            "distance": 50,
+            "sourceTime": "1:01.53Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 56.46,
+            "distance": 50,
+            "sourceTime": "56.46Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 46.77,
+            "distance": 50,
+            "sourceTime": "46.77Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 46.1,
+            "distance": 50,
+            "sourceTime": "46.10Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 45.19,
+            "distance": 50,
+            "sourceTime": "45.19Y",
+            "meet": "SLEEPYB_2024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 49.25,
+            "distance": 50,
+            "sourceTime": "49.25Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-03",
+            "seconds": 52.96,
+            "distance": 50,
+            "sourceTime": "52.96Y",
+            "meet": "OMPA_2024",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-04",
+            "seconds": 45.32,
+            "distance": 50,
+            "sourceTime": "45.32Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-11",
+            "seconds": 45.78,
+            "distance": 50,
+            "sourceTime": "50.82M",
+            "meet": "MEAD_AT_CCC_06112025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 46.35,
+            "distance": 50,
+            "sourceTime": "46.35Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 43.92,
+            "distance": 50,
+            "sourceTime": "43.92Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 42.82,
+            "distance": 50,
+            "sourceTime": "42.82Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-09",
+            "seconds": 41.22,
+            "distance": 50,
+            "sourceTime": "41.22Y",
+            "meet": "MRSC_AT_MEAD_07092025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 42.86,
+            "distance": 50,
+            "sourceTime": "42.86Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 42.8,
+            "distance": 50,
+            "sourceTime": "42.80Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 40.92,
+            "distance": 50,
+            "sourceTime": "40.92Y",
+            "meet": "SLEEPYB_2025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 42.16,
+            "distance": 50,
+            "sourceTime": "42.16Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-02",
+            "seconds": 39.44,
+            "distance": 50,
+            "sourceTime": "39.44Y",
+            "meet": "OMPA_2025",
+            "age": 10,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 38.46,
+            "distance": 50,
+            "sourceTime": "38.46Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-03",
+            "seconds": 40.25,
+            "distance": 50,
+            "sourceTime": "40.25Y",
+            "meet": "CCC_MEAD_AT_SH_06032026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 37.87,
+            "distance": 50,
+            "sourceTime": "37.87Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 37.81,
+            "distance": 50,
+            "sourceTime": "37.81Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 39.2,
+            "distance": 50,
+            "sourceTime": "39.20Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 37.07,
+            "distance": 50,
+            "sourceTime": "37.07Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-28",
+            "seconds": 37.01,
+            "distance": 50,
+            "sourceTime": "37.01Y",
+            "meet": "BOTTOMS_UP_2026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 35.32,
+            "distance": 50,
+            "sourceTime": "35.32Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 11,
+            "type": "F"
+          }
+        ],
+        "breaststroke": [
+          {
+            "date": "2024-05-19",
+            "seconds": 72.1,
+            "distance": 50,
+            "sourceTime": "1:12.10Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-05",
+            "seconds": 66.75,
+            "distance": 50,
+            "sourceTime": "1:06.75Y",
+            "meet": "LTST_AT_MEAD_06052024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 67.95,
+            "distance": 50,
+            "sourceTime": "1:07.95Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 65.62,
+            "distance": 50,
+            "sourceTime": "1:05.62Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 58.82,
+            "distance": 50,
+            "sourceTime": "58.82Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 60.12,
+            "distance": 50,
+            "sourceTime": "1:00.12Y",
+            "meet": "SLEEPYB_2024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 59.41,
+            "distance": 50,
+            "sourceTime": "59.41Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-04",
+            "seconds": 57.77,
+            "distance": 50,
+            "sourceTime": "57.77Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 57.93,
+            "distance": 50,
+            "sourceTime": "57.93Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 56.93,
+            "distance": 50,
+            "sourceTime": "56.93Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 56.28,
+            "distance": 50,
+            "sourceTime": "56.28Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 54.35,
+            "distance": 50,
+            "sourceTime": "54.35Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-02",
+            "seconds": 52.06,
+            "distance": 50,
+            "sourceTime": "52.06Y",
+            "meet": "OMPA_2025",
+            "age": 10,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 52.58,
+            "distance": 50,
+            "sourceTime": "52.58Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-03",
+            "seconds": 52.77,
+            "distance": 50,
+            "sourceTime": "52.77Y",
+            "meet": "CCC_MEAD_AT_SH_06032026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 49.32,
+            "distance": 50,
+            "sourceTime": "49.32Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 47.69,
+            "distance": 50,
+            "sourceTime": "47.69Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 48.02,
+            "distance": 50,
+            "sourceTime": "48.02Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 48.06,
+            "distance": 50,
+            "sourceTime": "48.06Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-28",
+            "seconds": 47.95,
+            "distance": 50,
+            "sourceTime": "47.95Y",
+            "meet": "BOTTOMS_UP_2026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 46.99,
+            "distance": 50,
+            "sourceTime": "46.99Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 11,
+            "type": "F"
+          }
+        ],
+        "backstroke": [
+          {
+            "date": "2022-06-11",
+            "seconds": 69.15,
+            "distance": 25,
+            "sourceTime": "1:09.15Y",
+            "meet": "CCC_AT_MEAD_06112022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-22",
+            "seconds": 50.11,
+            "distance": 25,
+            "sourceTime": "50.11Y",
+            "meet": "MEAD_AT_SH_06222022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-10",
+            "seconds": 48.17,
+            "distance": 25,
+            "sourceTime": "48.17Y",
+            "meet": "MEADOW_MINI_2022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-16",
+            "seconds": 81.48,
+            "distance": 25,
+            "sourceTime": "1:21.48Y",
+            "meet": "MEAD_AT_OCC_07162022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 122.15,
+            "distance": 25,
+            "sourceTime": "2:02.15Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-31",
+            "seconds": 63.74,
+            "distance": 25,
+            "sourceTime": "1:03.74Y",
+            "meet": "OMPA_2022",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 58.82,
+            "distance": 25,
+            "sourceTime": "58.82Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 36.71,
+            "distance": 25,
+            "sourceTime": "36.71Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 29.54,
+            "distance": 25,
+            "sourceTime": "29.54Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-01",
+            "seconds": 30.87,
+            "distance": 25,
+            "sourceTime": "30.87Y",
+            "meet": "LTST_AT_MEAD_07012023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-09",
+            "seconds": 36.12,
+            "distance": 25,
+            "sourceTime": "36.12Y",
+            "meet": "MEADOW_MINI_2023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 32.07,
+            "distance": 25,
+            "sourceTime": "32.07Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 31.68,
+            "distance": 25,
+            "sourceTime": "31.68Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-16",
+            "seconds": 34.62,
+            "distance": 25,
+            "sourceTime": "34.62Y",
+            "meet": "SLEEPYB_2023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 42.52,
+            "distance": 25,
+            "sourceTime": "42.52Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-30",
+            "seconds": 34.32,
+            "distance": 25,
+            "sourceTime": "34.32Y",
+            "meet": "OMPA_2023",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 89.81,
+            "distance": 50,
+            "sourceTime": "1:29.81Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 74.18,
+            "distance": 50,
+            "sourceTime": "1:14.18Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 75.41,
+            "distance": 50,
+            "sourceTime": "1:15.41Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 60.62,
+            "distance": 50,
+            "sourceTime": "1:00.62Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 67.02,
+            "distance": 50,
+            "sourceTime": "1:07.02Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-04",
+            "seconds": 59.47,
+            "distance": 50,
+            "sourceTime": "59.47Y",
+            "meet": "OMPA_2024",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-11",
+            "seconds": 54.32,
+            "distance": 50,
+            "sourceTime": "1:00.29M",
+            "meet": "MEAD_AT_CCC_06112025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 53.82,
+            "distance": 50,
+            "sourceTime": "53.82Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 52.6,
+            "distance": 50,
+            "sourceTime": "52.60Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 52.65,
+            "distance": 50,
+            "sourceTime": "52.65Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-09",
+            "seconds": 52.2,
+            "distance": 50,
+            "sourceTime": "52.20Y",
+            "meet": "MRSC_AT_MEAD_07092025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 50.73,
+            "distance": 50,
+            "sourceTime": "50.73Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 51.4,
+            "distance": 50,
+            "sourceTime": "51.40Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 46.49,
+            "distance": 50,
+            "sourceTime": "46.49Y",
+            "meet": "SLEEPYB_2025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 50.36,
+            "distance": 50,
+            "sourceTime": "50.36Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-03",
+            "seconds": 44.71,
+            "distance": 50,
+            "sourceTime": "44.71Y",
+            "meet": "OMPA_2025",
+            "age": 10,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 49.53,
+            "distance": 50,
+            "sourceTime": "49.53Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-03",
+            "seconds": 48.24,
+            "distance": 50,
+            "sourceTime": "48.24Y",
+            "meet": "CCC_MEAD_AT_SH_06032026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 51.64,
+            "distance": 50,
+            "sourceTime": "51.64Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 46.49,
+            "distance": 50,
+            "sourceTime": "46.49Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 49.76,
+            "distance": 50,
+            "sourceTime": "49.76Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 45.14,
+            "distance": 50,
+            "sourceTime": "45.14Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-28",
+            "seconds": 47.05,
+            "distance": 50,
+            "sourceTime": "47.05Y",
+            "meet": "BOTTOMS_UP_2026",
+            "age": 11,
+            "type": "F"
+          }
+        ],
+        "butterfly": [
+          {
+            "date": "2025-07-20",
+            "seconds": 54.88,
+            "distance": 50,
+            "sourceTime": "54.88Y",
+            "meet": "SLEEPYB_2025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 52.25,
+            "distance": 50,
+            "sourceTime": "52.25Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          }
+        ]
+      }
+    },
+    {
+      "id": "henry",
+      "name": "Henry",
+      "sourceUrl": "https://www.acornswim.com/Database/search/indsearch.php?swimmernames=MARTIN%2C+HENRY+%28MEAD%29&year%5B%5D=2026&year%5B%5D=2025&year%5B%5D=2024&year%5B%5D=2023&year%5B%5D=2022&year%5B%5D=2021&year%5B%5D=2020&year%5B%5D=2019&year%5B%5D=2018&yearselect=more&league=ompa",
+      "events": {
+        "freestyle": [
+          {
+            "date": "2021-06-19",
+            "seconds": 36.4,
+            "distance": 25,
+            "sourceTime": "36.40Y",
+            "meet": "MRSC_AT_MEAD_06192021",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-15",
+            "seconds": 35.58,
+            "distance": 25,
+            "sourceTime": "35.58Y",
+            "meet": "MEAD_AT_OCC_07172021",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-21",
+            "seconds": 32.2,
+            "distance": 25,
+            "sourceTime": "32.20Y",
+            "meet": "MEAD_INTRSQD_07212021",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-31",
+            "seconds": 29.49,
+            "distance": 25,
+            "sourceTime": "29.49Y",
+            "meet": "OMPA_2021",
+            "age": 6,
+            "type": "P"
+          },
+          {
+            "date": "2022-05-15",
+            "seconds": 25.91,
+            "distance": 25,
+            "sourceTime": "25.91Y",
+            "meet": "MEAD_TTRIALS_05152022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-05-21",
+            "seconds": 30.49,
+            "distance": 25,
+            "sourceTime": "30.49Y",
+            "meet": "MEAD_AT_SPBR_05212022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-04",
+            "seconds": 26.93,
+            "distance": 25,
+            "sourceTime": "26.93Y",
+            "meet": "MIRA_AT_MEAD_06042022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-11",
+            "seconds": 21.09,
+            "distance": 25,
+            "sourceTime": "21.09Y",
+            "meet": "CCC_AT_MEAD_06112022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-22",
+            "seconds": 26.14,
+            "distance": 25,
+            "sourceTime": "26.14Y",
+            "meet": "MEAD_AT_SH_06222022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-26",
+            "seconds": 20.05,
+            "distance": 25,
+            "sourceTime": "20.05Y",
+            "meet": "BOTTOMS_UP_2022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-10",
+            "seconds": 20.37,
+            "distance": 25,
+            "sourceTime": "20.37Y",
+            "meet": "MEADOW_MINI_2022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-13",
+            "seconds": 21.08,
+            "distance": 25,
+            "sourceTime": "21.08Y",
+            "meet": "MVP_AT_MEAD_07132022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-16",
+            "seconds": 19.44,
+            "distance": 25,
+            "sourceTime": "19.44Y",
+            "meet": "MEAD_AT_OCC_07162022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 21.18,
+            "distance": 25,
+            "sourceTime": "21.18Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-30",
+            "seconds": 20.14,
+            "distance": 25,
+            "sourceTime": "20.14Y",
+            "meet": "OMPA_2022",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2023-05-13",
+            "seconds": 19.44,
+            "distance": 25,
+            "sourceTime": "19.44Y",
+            "meet": "MEAD_TTRIALS_05132023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-03",
+            "seconds": 19.01,
+            "distance": 25,
+            "sourceTime": "21.10M",
+            "meet": "MEAD_AT_CCC_06032023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 21.3,
+            "distance": 25,
+            "sourceTime": "21.30Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-14",
+            "seconds": 22.08,
+            "distance": 25,
+            "sourceTime": "22.08Y",
+            "meet": "MEAD_AT_MCC_06142023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 21.29,
+            "distance": 25,
+            "sourceTime": "21.29Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 21.42,
+            "distance": 25,
+            "sourceTime": "21.42Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-01",
+            "seconds": 21.59,
+            "distance": 25,
+            "sourceTime": "21.59Y",
+            "meet": "LTST_AT_MEAD_07012023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-09",
+            "seconds": 18.89,
+            "distance": 25,
+            "sourceTime": "18.89Y",
+            "meet": "MEADOW_MINI_2023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 18.98,
+            "distance": 25,
+            "sourceTime": "18.98Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 18.75,
+            "distance": 25,
+            "sourceTime": "18.75Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 17.91,
+            "distance": 25,
+            "sourceTime": "17.91Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-29",
+            "seconds": 17.78,
+            "distance": 25,
+            "sourceTime": "17.78Y",
+            "meet": "OMPA_2023",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 43.36,
+            "distance": 50,
+            "sourceTime": "43.36Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-05",
+            "seconds": 41.43,
+            "distance": 50,
+            "sourceTime": "41.43Y",
+            "meet": "LTST_AT_MEAD_06052024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 42.28,
+            "distance": 50,
+            "sourceTime": "42.28Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-12",
+            "seconds": 39.28,
+            "distance": 50,
+            "sourceTime": "39.28Y",
+            "meet": "MIRA_AT_MEAD_06122024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 40.12,
+            "distance": 50,
+            "sourceTime": "40.12Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 37.84,
+            "distance": 50,
+            "sourceTime": "37.84Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 38.89,
+            "distance": 50,
+            "sourceTime": "38.89Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 37.38,
+            "distance": 50,
+            "sourceTime": "37.38Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 38.9,
+            "distance": 50,
+            "sourceTime": "38.90Y",
+            "meet": "SLEEPYB_2024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 41.45,
+            "distance": 50,
+            "sourceTime": "41.45Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-03",
+            "seconds": 39.87,
+            "distance": 50,
+            "sourceTime": "39.87Y",
+            "meet": "OMPA_2024",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-04",
+            "seconds": 37.66,
+            "distance": 50,
+            "sourceTime": "37.66Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-11",
+            "seconds": 40.05,
+            "distance": 50,
+            "sourceTime": "44.46M",
+            "meet": "MEAD_AT_CCC_06112025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 38.59,
+            "distance": 50,
+            "sourceTime": "38.59Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 38.86,
+            "distance": 50,
+            "sourceTime": "38.86Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 38.07,
+            "distance": 50,
+            "sourceTime": "38.07Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 35.41,
+            "distance": 50,
+            "sourceTime": "35.41Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 37.06,
+            "distance": 50,
+            "sourceTime": "37.06Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-02",
+            "seconds": 35.69,
+            "distance": 50,
+            "sourceTime": "35.69Y",
+            "meet": "OMPA_2025",
+            "age": 10,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 35.48,
+            "distance": 50,
+            "sourceTime": "35.48Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-03",
+            "seconds": 33.4,
+            "distance": 50,
+            "sourceTime": "33.40Y",
+            "meet": "CCC_MEAD_AT_SH_06032026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 35.18,
+            "distance": 50,
+            "sourceTime": "35.18Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 34.57,
+            "distance": 50,
+            "sourceTime": "34.57Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 35.51,
+            "distance": 50,
+            "sourceTime": "35.51Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 33.32,
+            "distance": 50,
+            "sourceTime": "33.32Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-28",
+            "seconds": 34.49,
+            "distance": 50,
+            "sourceTime": "34.49Y",
+            "meet": "BOTTOMS_UP_2026",
+            "age": 11,
+            "type": "F"
+          }
+        ],
+        "breaststroke": [
+          {
+            "date": "2022-06-22",
+            "seconds": 42.08,
+            "distance": 25,
+            "sourceTime": "42.08Y",
+            "meet": "MEAD_AT_SH_06222022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-13",
+            "seconds": 35.69,
+            "distance": 25,
+            "sourceTime": "35.69Y",
+            "meet": "MVP_AT_MEAD_07132022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 31.58,
+            "distance": 25,
+            "sourceTime": "31.58Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-03",
+            "seconds": 30.11,
+            "distance": 25,
+            "sourceTime": "33.42M",
+            "meet": "MEAD_AT_CCC_06032023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 33.12,
+            "distance": 25,
+            "sourceTime": "33.12Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-14",
+            "seconds": 32.12,
+            "distance": 25,
+            "sourceTime": "32.12Y",
+            "meet": "MEAD_AT_MCC_06142023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 30.97,
+            "distance": 25,
+            "sourceTime": "30.97Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 62.53,
+            "distance": 50,
+            "sourceTime": "1:02.53Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-05",
+            "seconds": 58.6,
+            "distance": 50,
+            "sourceTime": "58.60Y",
+            "meet": "LTST_AT_MEAD_06052024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 56.22,
+            "distance": 50,
+            "sourceTime": "56.22Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-12",
+            "seconds": 57.11,
+            "distance": 50,
+            "sourceTime": "57.11Y",
+            "meet": "MIRA_AT_MEAD_06122024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 56.2,
+            "distance": 50,
+            "sourceTime": "56.20Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 52.84,
+            "distance": 50,
+            "sourceTime": "52.84Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 51.54,
+            "distance": 50,
+            "sourceTime": "51.54Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 52.46,
+            "distance": 50,
+            "sourceTime": "52.46Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-04",
+            "seconds": 52.87,
+            "distance": 50,
+            "sourceTime": "52.87Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 46.99,
+            "distance": 50,
+            "sourceTime": "46.99Y",
+            "meet": "SLEEPYB_2025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 51.59,
+            "distance": 50,
+            "sourceTime": "51.59Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 51.11,
+            "distance": 50,
+            "sourceTime": "51.11Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 50.44,
+            "distance": 50,
+            "sourceTime": "50.44Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 46.55,
+            "distance": 50,
+            "sourceTime": "46.55Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 51.18,
+            "distance": 50,
+            "sourceTime": "51.18Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 46.39,
+            "distance": 50,
+            "sourceTime": "46.39Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 11,
+            "type": "F"
+          }
+        ],
+        "backstroke": [
+          {
+            "date": "2021-07-15",
+            "seconds": 37.98,
+            "distance": 25,
+            "sourceTime": "37.98Y",
+            "meet": "MEAD_AT_OCC_07172021",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-21",
+            "seconds": 35.01,
+            "distance": 25,
+            "sourceTime": "35.01Y",
+            "meet": "MEAD_INTRSQD_07212021",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2021-08-01",
+            "seconds": 32.22,
+            "distance": 25,
+            "sourceTime": "32.22Y",
+            "meet": "OMPA_2021",
+            "age": 6,
+            "type": "P"
+          },
+          {
+            "date": "2022-05-15",
+            "seconds": 32.93,
+            "distance": 25,
+            "sourceTime": "32.93Y",
+            "meet": "MEAD_TTRIALS_05152022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-05-21",
+            "seconds": 28.2,
+            "distance": 25,
+            "sourceTime": "28.20Y",
+            "meet": "MEAD_AT_SPBR_05212022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-04",
+            "seconds": 31,
+            "distance": 25,
+            "sourceTime": "31.00Y",
+            "meet": "MIRA_AT_MEAD_06042022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-11",
+            "seconds": 29.74,
+            "distance": 25,
+            "sourceTime": "29.74Y",
+            "meet": "CCC_AT_MEAD_06112022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-26",
+            "seconds": 27.2,
+            "distance": 25,
+            "sourceTime": "27.20Y",
+            "meet": "BOTTOMS_UP_2022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-10",
+            "seconds": 30.57,
+            "distance": 25,
+            "sourceTime": "30.57Y",
+            "meet": "MEADOW_MINI_2022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-13",
+            "seconds": 28.44,
+            "distance": 25,
+            "sourceTime": "28.44Y",
+            "meet": "MVP_AT_MEAD_07132022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-16",
+            "seconds": 28.54,
+            "distance": 25,
+            "sourceTime": "28.54Y",
+            "meet": "MEAD_AT_OCC_07162022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 29.02,
+            "distance": 25,
+            "sourceTime": "29.02Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-31",
+            "seconds": 28.02,
+            "distance": 25,
+            "sourceTime": "28.02Y",
+            "meet": "OMPA_2022",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2023-06-03",
+            "seconds": 25.17,
+            "distance": 25,
+            "sourceTime": "27.94M",
+            "meet": "MEAD_AT_CCC_06032023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 27.04,
+            "distance": 25,
+            "sourceTime": "27.04Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-14",
+            "seconds": 24.82,
+            "distance": 25,
+            "sourceTime": "24.82Y",
+            "meet": "MEAD_AT_MCC_06142023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 26.16,
+            "distance": 25,
+            "sourceTime": "26.16Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 29.08,
+            "distance": 25,
+            "sourceTime": "29.08Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-09",
+            "seconds": 26.47,
+            "distance": 25,
+            "sourceTime": "26.47Y",
+            "meet": "MEADOW_MINI_2023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 24.93,
+            "distance": 25,
+            "sourceTime": "24.93Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 25.37,
+            "distance": 25,
+            "sourceTime": "25.37Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 24.96,
+            "distance": 25,
+            "sourceTime": "24.96Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-30",
+            "seconds": 23.48,
+            "distance": 25,
+            "sourceTime": "23.48Y",
+            "meet": "OMPA_2023",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 60.82,
+            "distance": 50,
+            "sourceTime": "1:00.82Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 51.69,
+            "distance": 50,
+            "sourceTime": "51.69Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-12",
+            "seconds": 49.17,
+            "distance": 50,
+            "sourceTime": "49.17Y",
+            "meet": "MIRA_AT_MEAD_06122024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 52.45,
+            "distance": 50,
+            "sourceTime": "52.45Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 47.93,
+            "distance": 50,
+            "sourceTime": "47.93Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 47.29,
+            "distance": 50,
+            "sourceTime": "47.29Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 49.54,
+            "distance": 50,
+            "sourceTime": "49.54Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 47.75,
+            "distance": 50,
+            "sourceTime": "47.75Y",
+            "meet": "SLEEPYB_2024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 52.04,
+            "distance": 50,
+            "sourceTime": "52.04Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-04",
+            "seconds": 48.22,
+            "distance": 50,
+            "sourceTime": "48.22Y",
+            "meet": "OMPA_2024",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-07",
+            "seconds": 46.75,
+            "distance": 50,
+            "sourceTime": "46.75Y",
+            "meet": "MEAD_OMSC_AT_MVP_06072025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 43.84,
+            "distance": 50,
+            "sourceTime": "43.84Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 46.01,
+            "distance": 50,
+            "sourceTime": "46.01Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 46.93,
+            "distance": 50,
+            "sourceTime": "46.93Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 45.91,
+            "distance": 50,
+            "sourceTime": "45.91Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 49.1,
+            "distance": 50,
+            "sourceTime": "49.10Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-03",
+            "seconds": 43.01,
+            "distance": 50,
+            "sourceTime": "43.01Y",
+            "meet": "OMPA_2025",
+            "age": 10,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 46.22,
+            "distance": 50,
+            "sourceTime": "46.22Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-03",
+            "seconds": 44.4,
+            "distance": 50,
+            "sourceTime": "44.40Y",
+            "meet": "CCC_MEAD_AT_SH_06032026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 41.98,
+            "distance": 50,
+            "sourceTime": "41.98Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 39.69,
+            "distance": 50,
+            "sourceTime": "39.69Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 40.82,
+            "distance": 50,
+            "sourceTime": "40.82Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 11,
+            "type": "F"
+          }
+        ],
+        "butterfly": [
+          {
+            "date": "2023-06-17",
+            "seconds": 24.03,
+            "distance": 25,
+            "sourceTime": "24.03Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 23.47,
+            "distance": 25,
+            "sourceTime": "23.47Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 24.97,
+            "distance": 25,
+            "sourceTime": "24.97Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-30",
+            "seconds": 25.46,
+            "distance": 25,
+            "sourceTime": "25.46Y",
+            "meet": "OMPA_2023",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 59.18,
+            "distance": 50,
+            "sourceTime": "59.18Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 49.46,
+            "distance": 50,
+            "sourceTime": "49.46Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 48.81,
+            "distance": 50,
+            "sourceTime": "48.81Y",
+            "meet": "SLEEPYB_2024",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-04",
+            "seconds": 51.77,
+            "distance": 50,
+            "sourceTime": "51.77Y",
+            "meet": "OMPA_2024",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-07",
+            "seconds": 51.94,
+            "distance": 50,
+            "sourceTime": "51.94Y",
+            "meet": "MEAD_OMSC_AT_MVP_06072025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 48.17,
+            "distance": 50,
+            "sourceTime": "48.17Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 43.77,
+            "distance": 50,
+            "sourceTime": "43.77Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 48.02,
+            "distance": 50,
+            "sourceTime": "48.02Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 44.09,
+            "distance": 50,
+            "sourceTime": "44.09Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 46.59,
+            "distance": 50,
+            "sourceTime": "46.59Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 50.94,
+            "distance": 50,
+            "sourceTime": "50.94Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-03",
+            "seconds": 43.29,
+            "distance": 50,
+            "sourceTime": "43.29Y",
+            "meet": "OMPA_2025",
+            "age": 10,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 45.19,
+            "distance": 50,
+            "sourceTime": "45.19Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-03",
+            "seconds": 41.44,
+            "distance": 50,
+            "sourceTime": "41.44Y",
+            "meet": "CCC_MEAD_AT_SH_06032026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 43.77,
+            "distance": 50,
+            "sourceTime": "43.77Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 44.29,
+            "distance": 50,
+            "sourceTime": "44.29Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-28",
+            "seconds": 39.04,
+            "distance": 50,
+            "sourceTime": "39.04Y",
+            "meet": "BOTTOMS_UP_2026",
+            "age": 11,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 39.04,
+            "distance": 50,
+            "sourceTime": "39.04Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 11,
+            "type": "F"
+          }
+        ]
+      }
+    },
+    {
+      "id": "emma",
+      "name": "Emma",
+      "sourceUrl": "https://www.acornswim.com/Database/search/indsearch.php?swimmernames=MARTIN%2C+EMMA+%28MEAD%29&year%5B%5D=2026&year%5B%5D=2025&year%5B%5D=2024&year%5B%5D=2023&year%5B%5D=2022&year%5B%5D=2021&year%5B%5D=2020&year%5B%5D=2019&yearselect=more&league=ompa",
+      "events": {
+        "freestyle": [
+          {
+            "date": "2021-07-15",
+            "seconds": 58.13,
+            "distance": 25,
+            "sourceTime": "58.13Y",
+            "meet": "MEAD_AT_OCC_07172021",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-21",
+            "seconds": 43.29,
+            "distance": 25,
+            "sourceTime": "43.29Y",
+            "meet": "MEAD_INTRSQD_07212021",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-31",
+            "seconds": 51.16,
+            "distance": 25,
+            "sourceTime": "51.16Y",
+            "meet": "OMPA_2021",
+            "age": 5,
+            "type": "P"
+          },
+          {
+            "date": "2022-05-15",
+            "seconds": 34.83,
+            "distance": 25,
+            "sourceTime": "34.83Y",
+            "meet": "MEAD_TTRIALS_05152022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-05-21",
+            "seconds": 34.2,
+            "distance": 25,
+            "sourceTime": "34.20Y",
+            "meet": "MEAD_AT_SPBR_05212022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-04",
+            "seconds": 30.16,
+            "distance": 25,
+            "sourceTime": "30.16Y",
+            "meet": "MIRA_AT_MEAD_06042022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-11",
+            "seconds": 32.56,
+            "distance": 25,
+            "sourceTime": "32.56Y",
+            "meet": "CCC_AT_MEAD_06112022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-15",
+            "seconds": 29.65,
+            "distance": 25,
+            "sourceTime": "29.65Y",
+            "meet": "MRSC_AT_MEAD_06152022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-22",
+            "seconds": 27.48,
+            "distance": 25,
+            "sourceTime": "27.48Y",
+            "meet": "MEAD_AT_SH_06222022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-13",
+            "seconds": 28.34,
+            "distance": 25,
+            "sourceTime": "28.34Y",
+            "meet": "MVP_AT_MEAD_07132022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-16",
+            "seconds": 28.04,
+            "distance": 25,
+            "sourceTime": "28.04Y",
+            "meet": "MEAD_AT_OCC_07162022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 27.81,
+            "distance": 25,
+            "sourceTime": "27.81Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-30",
+            "seconds": 28.87,
+            "distance": 25,
+            "sourceTime": "28.87Y",
+            "meet": "OMPA_2022",
+            "age": 6,
+            "type": "P"
+          },
+          {
+            "date": "2023-05-13",
+            "seconds": 25.17,
+            "distance": 25,
+            "sourceTime": "25.17Y",
+            "meet": "MEAD_TTRIALS_05132023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 25.62,
+            "distance": 25,
+            "sourceTime": "25.62Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-14",
+            "seconds": 25.68,
+            "distance": 25,
+            "sourceTime": "25.68Y",
+            "meet": "MEAD_AT_MCC_06142023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 24.72,
+            "distance": 25,
+            "sourceTime": "24.72Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 23.89,
+            "distance": 25,
+            "sourceTime": "23.89Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-25",
+            "seconds": 26.09,
+            "distance": 25,
+            "sourceTime": "26.09Y",
+            "meet": "BOTTOMS_UP_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-01",
+            "seconds": 24.39,
+            "distance": 25,
+            "sourceTime": "24.39Y",
+            "meet": "LTST_AT_MEAD_07012023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-09",
+            "seconds": 27.14,
+            "distance": 25,
+            "sourceTime": "27.14Y",
+            "meet": "MEADOW_MINI_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 21.92,
+            "distance": 25,
+            "sourceTime": "21.92Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 22.31,
+            "distance": 25,
+            "sourceTime": "22.31Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-16",
+            "seconds": 21.25,
+            "distance": 25,
+            "sourceTime": "21.25Y",
+            "meet": "SLEEPYB_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 22.77,
+            "distance": 25,
+            "sourceTime": "22.77Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-29",
+            "seconds": 21.97,
+            "distance": 25,
+            "sourceTime": "21.97Y",
+            "meet": "OMPA_2023",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 21.72,
+            "distance": 25,
+            "sourceTime": "21.72Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 20.81,
+            "distance": 25,
+            "sourceTime": "20.81Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-12",
+            "seconds": 20.6,
+            "distance": 25,
+            "sourceTime": "20.60Y",
+            "meet": "MIRA_AT_MEAD_06122024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 20.06,
+            "distance": 25,
+            "sourceTime": "20.06Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-19",
+            "seconds": 21.5,
+            "distance": 25,
+            "sourceTime": "21.50Y",
+            "meet": "MEAD_AT_MRSC_06192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 20.75,
+            "distance": 25,
+            "sourceTime": "20.75Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-10",
+            "seconds": 21.57,
+            "distance": 25,
+            "sourceTime": "21.57Y",
+            "meet": "MCC_AT_MEAD_07102024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-14",
+            "seconds": 21.71,
+            "distance": 25,
+            "sourceTime": "21.71Y",
+            "meet": "MEADOW_MINI_2024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 20.53,
+            "distance": 25,
+            "sourceTime": "20.53Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 20.62,
+            "distance": 25,
+            "sourceTime": "20.62Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 19.59,
+            "distance": 25,
+            "sourceTime": "19.59Y",
+            "meet": "SLEEPYB_2024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-03",
+            "seconds": 20.57,
+            "distance": 25,
+            "sourceTime": "20.57Y",
+            "meet": "OMPA_2024",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-04",
+            "seconds": 41.78,
+            "distance": 50,
+            "sourceTime": "41.78Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-11",
+            "seconds": 47.44,
+            "distance": 50,
+            "sourceTime": "52.66M",
+            "meet": "MEAD_AT_CCC_06112025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 48.77,
+            "distance": 50,
+            "sourceTime": "48.77Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 47.08,
+            "distance": 50,
+            "sourceTime": "47.08Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 48.29,
+            "distance": 50,
+            "sourceTime": "48.29Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-09",
+            "seconds": 44.8,
+            "distance": 50,
+            "sourceTime": "44.80Y",
+            "meet": "MRSC_AT_MEAD_07092025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 50.86,
+            "distance": 50,
+            "sourceTime": "50.86Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 43.99,
+            "distance": 50,
+            "sourceTime": "43.99Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 43.22,
+            "distance": 50,
+            "sourceTime": "43.22Y",
+            "meet": "SLEEPYB_2025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 45.87,
+            "distance": 50,
+            "sourceTime": "45.87Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-02",
+            "seconds": 44.25,
+            "distance": 50,
+            "sourceTime": "44.25Y",
+            "meet": "OMPA_2025",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 42.48,
+            "distance": 50,
+            "sourceTime": "42.48Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-06",
+            "seconds": 41.78,
+            "distance": 50,
+            "sourceTime": "41.78Y",
+            "meet": "MEAD_CCC_AT_SH_06062026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 39.7,
+            "distance": 50,
+            "sourceTime": "39.70Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 40.91,
+            "distance": 50,
+            "sourceTime": "40.91Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 41.83,
+            "distance": 50,
+            "sourceTime": "41.83Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-24",
+            "seconds": 39.23,
+            "distance": 50,
+            "sourceTime": "39.23Y",
+            "meet": "MCC_AT_MEAD_06242026",
+            "age": 10,
+            "type": "F"
+          }
+        ],
+        "breaststroke": [
+          {
+            "date": "2022-07-06",
+            "seconds": 48,
+            "distance": 25,
+            "sourceTime": "48.00Y",
+            "meet": "MEAD_AT_PARK_07062022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-10",
+            "seconds": 45.72,
+            "distance": 25,
+            "sourceTime": "45.72Y",
+            "meet": "MEADOW_MINI_2022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-13",
+            "seconds": 45.97,
+            "distance": 25,
+            "sourceTime": "45.97Y",
+            "meet": "MVP_AT_MEAD_07132022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 45.16,
+            "distance": 25,
+            "sourceTime": "45.16Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 37.47,
+            "distance": 25,
+            "sourceTime": "37.47Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-14",
+            "seconds": 35.53,
+            "distance": 25,
+            "sourceTime": "35.53Y",
+            "meet": "MEAD_AT_MCC_06142023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 34.75,
+            "distance": 25,
+            "sourceTime": "34.75Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 32.91,
+            "distance": 25,
+            "sourceTime": "32.91Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-25",
+            "seconds": 36.84,
+            "distance": 25,
+            "sourceTime": "36.84Y",
+            "meet": "BOTTOMS_UP_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-01",
+            "seconds": 33.65,
+            "distance": 25,
+            "sourceTime": "33.65Y",
+            "meet": "LTST_AT_MEAD_07012023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 32.34,
+            "distance": 25,
+            "sourceTime": "32.34Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 31.99,
+            "distance": 25,
+            "sourceTime": "31.99Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-16",
+            "seconds": 31.27,
+            "distance": 25,
+            "sourceTime": "31.27Y",
+            "meet": "SLEEPYB_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 32.97,
+            "distance": 25,
+            "sourceTime": "32.97Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-29",
+            "seconds": 29.9,
+            "distance": 25,
+            "sourceTime": "29.90Y",
+            "meet": "OMPA_2023",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 27.61,
+            "distance": 25,
+            "sourceTime": "27.61Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-05",
+            "seconds": 26.75,
+            "distance": 25,
+            "sourceTime": "26.75Y",
+            "meet": "LTST_AT_MEAD_06052024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 26.16,
+            "distance": 25,
+            "sourceTime": "26.16Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-10",
+            "seconds": 27.5,
+            "distance": 25,
+            "sourceTime": "27.50Y",
+            "meet": "MCC_AT_MEAD_07102024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 25.12,
+            "distance": 25,
+            "sourceTime": "25.12Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 25.48,
+            "distance": 25,
+            "sourceTime": "25.48Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-04",
+            "seconds": 49.79,
+            "distance": 50,
+            "sourceTime": "49.79Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 53.79,
+            "distance": 50,
+            "sourceTime": "53.79Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 53.46,
+            "distance": 50,
+            "sourceTime": "53.46Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 51.78,
+            "distance": 50,
+            "sourceTime": "51.78Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-09",
+            "seconds": 52.87,
+            "distance": 50,
+            "sourceTime": "52.87Y",
+            "meet": "MRSC_AT_MEAD_07092025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 53.66,
+            "distance": 50,
+            "sourceTime": "53.66Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 51.64,
+            "distance": 50,
+            "sourceTime": "51.64Y",
+            "meet": "SLEEPYB_2025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 53.23,
+            "distance": 50,
+            "sourceTime": "53.23Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-02",
+            "seconds": 52.21,
+            "distance": 50,
+            "sourceTime": "52.21Y",
+            "meet": "OMPA_2025",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 50.33,
+            "distance": 50,
+            "sourceTime": "50.33Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-06",
+            "seconds": 47.53,
+            "distance": 50,
+            "sourceTime": "47.53Y",
+            "meet": "MEAD_CCC_AT_SH_06062026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 47.45,
+            "distance": 50,
+            "sourceTime": "47.45Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 49.37,
+            "distance": 50,
+            "sourceTime": "49.37Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 49.54,
+            "distance": 50,
+            "sourceTime": "49.54Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 45.9,
+            "distance": 50,
+            "sourceTime": "45.90Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 10,
+            "type": "F"
+          }
+        ],
+        "backstroke": [
+          {
+            "date": "2021-07-15",
+            "seconds": 54.83,
+            "distance": 25,
+            "sourceTime": "54.83Y",
+            "meet": "MEAD_AT_OCC_07172021",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2021-07-21",
+            "seconds": 45.86,
+            "distance": 25,
+            "sourceTime": "45.86Y",
+            "meet": "MEAD_INTRSQD_07212021",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2021-08-01",
+            "seconds": 56.77,
+            "distance": 25,
+            "sourceTime": "56.77Y",
+            "meet": "OMPA_2021",
+            "age": 5,
+            "type": "P"
+          },
+          {
+            "date": "2022-05-15",
+            "seconds": 42.14,
+            "distance": 25,
+            "sourceTime": "42.14Y",
+            "meet": "MEAD_TTRIALS_05152022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-05-21",
+            "seconds": 40.65,
+            "distance": 25,
+            "sourceTime": "40.65Y",
+            "meet": "MEAD_AT_SPBR_05212022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-04",
+            "seconds": 36.42,
+            "distance": 25,
+            "sourceTime": "36.42Y",
+            "meet": "MIRA_AT_MEAD_06042022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-11",
+            "seconds": 36.12,
+            "distance": 25,
+            "sourceTime": "36.12Y",
+            "meet": "CCC_AT_MEAD_06112022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-15",
+            "seconds": 33.63,
+            "distance": 25,
+            "sourceTime": "33.63Y",
+            "meet": "MRSC_AT_MEAD_06152022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-06-22",
+            "seconds": 35.9,
+            "distance": 25,
+            "sourceTime": "35.90Y",
+            "meet": "MEAD_AT_SH_06222022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-06",
+            "seconds": 33.28,
+            "distance": 25,
+            "sourceTime": "33.28Y",
+            "meet": "MEAD_AT_PARK_07062022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-10",
+            "seconds": 36.03,
+            "distance": 25,
+            "sourceTime": "36.03Y",
+            "meet": "MEADOW_MINI_2022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-13",
+            "seconds": 36.46,
+            "distance": 25,
+            "sourceTime": "36.46Y",
+            "meet": "MVP_AT_MEAD_07132022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-16",
+            "seconds": 40.13,
+            "distance": 25,
+            "sourceTime": "40.13Y",
+            "meet": "MEAD_AT_OCC_07162022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-20",
+            "seconds": 35.12,
+            "distance": 25,
+            "sourceTime": "35.12Y",
+            "meet": "MEAD_INTRSQD_07202022",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2022-07-31",
+            "seconds": 33.37,
+            "distance": 25,
+            "sourceTime": "33.37Y",
+            "meet": "OMPA_2022",
+            "age": 6,
+            "type": "P"
+          },
+          {
+            "date": "2023-06-10",
+            "seconds": 30.5,
+            "distance": 25,
+            "sourceTime": "30.50Y",
+            "meet": "MIRA_AT_MEAD_06102023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-14",
+            "seconds": 29.92,
+            "distance": 25,
+            "sourceTime": "29.92Y",
+            "meet": "MEAD_AT_MCC_06142023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-17",
+            "seconds": 28.38,
+            "distance": 25,
+            "sourceTime": "28.38Y",
+            "meet": "PARK_AT_MEAD_06172023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-21",
+            "seconds": 30.06,
+            "distance": 25,
+            "sourceTime": "30.06Y",
+            "meet": "MEAD_AT_MVP_06212023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-06-25",
+            "seconds": 29.9,
+            "distance": 25,
+            "sourceTime": "29.90Y",
+            "meet": "BOTTOMS_UP_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-01",
+            "seconds": 28.69,
+            "distance": 25,
+            "sourceTime": "28.69Y",
+            "meet": "LTST_AT_MEAD_07012023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-09",
+            "seconds": 29.1,
+            "distance": 25,
+            "sourceTime": "29.10Y",
+            "meet": "MEADOW_MINI_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-12",
+            "seconds": 28.48,
+            "distance": 25,
+            "sourceTime": "28.48Y",
+            "meet": "SH_AT_MEAD_07122023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-15",
+            "seconds": 28.02,
+            "distance": 25,
+            "sourceTime": "28.02Y",
+            "meet": "MEAD_AT_OCC_07152023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-16",
+            "seconds": 29.31,
+            "distance": 25,
+            "sourceTime": "29.31Y",
+            "meet": "SLEEPYB_2023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-19",
+            "seconds": 31.09,
+            "distance": 25,
+            "sourceTime": "31.09Y",
+            "meet": "MEAD_INTRSQD_07192023",
+            "age": 7,
+            "type": "F"
+          },
+          {
+            "date": "2023-07-30",
+            "seconds": 26.22,
+            "distance": 25,
+            "sourceTime": "26.22Y",
+            "meet": "OMPA_2023",
+            "age": 7,
+            "type": "P"
+          },
+          {
+            "date": "2024-05-19",
+            "seconds": 27.75,
+            "distance": 25,
+            "sourceTime": "27.75Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 28.02,
+            "distance": 25,
+            "sourceTime": "28.02Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-12",
+            "seconds": 29.07,
+            "distance": 25,
+            "sourceTime": "29.07Y",
+            "meet": "MIRA_AT_MEAD_06122024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-19",
+            "seconds": 27.26,
+            "distance": 25,
+            "sourceTime": "27.26Y",
+            "meet": "MEAD_AT_MRSC_06192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-17",
+            "seconds": 26.5,
+            "distance": 25,
+            "sourceTime": "26.50Y",
+            "meet": "MEAD_AT_SH_07172024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-21",
+            "seconds": 26.77,
+            "distance": 25,
+            "sourceTime": "26.77Y",
+            "meet": "SLEEPYB_2024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-07",
+            "seconds": 54.88,
+            "distance": 50,
+            "sourceTime": "54.88Y",
+            "meet": "MEAD_OMSC_AT_MVP_06072025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-11",
+            "seconds": 56.55,
+            "distance": 50,
+            "sourceTime": "1:02.77M",
+            "meet": "MEAD_AT_CCC_06112025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 56.66,
+            "distance": 50,
+            "sourceTime": "56.66Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 49.66,
+            "distance": 50,
+            "sourceTime": "49.66Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-03",
+            "seconds": 48.14,
+            "distance": 50,
+            "sourceTime": "48.14Y",
+            "meet": "OMPA_2025",
+            "age": 9,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 52.97,
+            "distance": 50,
+            "sourceTime": "52.97Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-06",
+            "seconds": 48.04,
+            "distance": 50,
+            "sourceTime": "48.04Y",
+            "meet": "MEAD_CCC_AT_SH_06062026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 47.91,
+            "distance": 50,
+            "sourceTime": "47.91Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 48.67,
+            "distance": 50,
+            "sourceTime": "48.67Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 47.89,
+            "distance": 50,
+            "sourceTime": "47.89Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 47.04,
+            "distance": 50,
+            "sourceTime": "47.04Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-24",
+            "seconds": 47.04,
+            "distance": 50,
+            "sourceTime": "47.04Y",
+            "meet": "MCC_AT_MEAD_06242026",
+            "age": 10,
+            "type": "F"
+          }
+        ],
+        "butterfly": [
+          {
+            "date": "2024-05-19",
+            "seconds": 30.01,
+            "distance": 25,
+            "sourceTime": "30.01Y",
+            "meet": "MEAD_TTRIALS_05192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-05",
+            "seconds": 25.45,
+            "distance": 25,
+            "sourceTime": "25.45Y",
+            "meet": "LTST_AT_MEAD_06052024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-08",
+            "seconds": 25.48,
+            "distance": 25,
+            "sourceTime": "25.48Y",
+            "meet": "CCC_AT_MEAD_06082024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-12",
+            "seconds": 24.48,
+            "distance": 25,
+            "sourceTime": "24.48Y",
+            "meet": "MIRA_AT_MEAD_06122024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-15",
+            "seconds": 22.12,
+            "distance": 25,
+            "sourceTime": "22.12Y",
+            "meet": "SPBR_AT_MEAD_06152024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-19",
+            "seconds": 25.42,
+            "distance": 25,
+            "sourceTime": "25.42Y",
+            "meet": "MEAD_AT_MRSC_06192024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-06-22",
+            "seconds": 23.8,
+            "distance": 25,
+            "sourceTime": "23.80Y",
+            "meet": "MEAD_AT_PARK_06222024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-10",
+            "seconds": 22.9,
+            "distance": 25,
+            "sourceTime": "22.90Y",
+            "meet": "MCC_AT_MEAD_07102024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-14",
+            "seconds": 23.52,
+            "distance": 25,
+            "sourceTime": "23.52Y",
+            "meet": "MEADOW_MINI_2024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-20",
+            "seconds": 26.76,
+            "distance": 25,
+            "sourceTime": "26.76Y",
+            "meet": "OCC_AT_MEAD_07202024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-07-24",
+            "seconds": 27.17,
+            "distance": 25,
+            "sourceTime": "27.17Y",
+            "meet": "MIRA_AT_MEAD_07242024",
+            "age": 8,
+            "type": "F"
+          },
+          {
+            "date": "2024-08-04",
+            "seconds": 21.85,
+            "distance": 25,
+            "sourceTime": "21.85Y",
+            "meet": "OMPA_2024",
+            "age": 8,
+            "type": "P"
+          },
+          {
+            "date": "2025-06-07",
+            "seconds": 63.61,
+            "distance": 50,
+            "sourceTime": "1:03.61Y",
+            "meet": "MEAD_OMSC_AT_MVP_06072025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 56.16,
+            "distance": 50,
+            "sourceTime": "56.16Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 57.33,
+            "distance": 50,
+            "sourceTime": "57.33Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 57.13,
+            "distance": 50,
+            "sourceTime": "57.13Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 57.89,
+            "distance": 50,
+            "sourceTime": "57.89Y",
+            "meet": "SLEEPYB_2025",
+            "age": 9,
+            "type": "F"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 56.62,
+            "distance": 50,
+            "sourceTime": "56.62Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 54.06,
+            "distance": 50,
+            "sourceTime": "54.06Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 10,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 52.01,
+            "distance": 50,
+            "sourceTime": "52.01Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 10,
+            "type": "F"
+          }
+        ]
+      }
+    },
+    {
+      "id": "maggie",
+      "name": "Maggie",
+      "sourceUrl": "https://www.acornswim.com/Database/search/indsearch.php?swimmernames=MARTIN%2C+MAGGIE+%28MEAD%29&year%5B%5D=2026&year%5B%5D=2025&year%5B%5D=2024&year%5B%5D=2023&year%5B%5D=2022&year%5B%5D=2021&year%5B%5D=2020&year%5B%5D=2019&yearselect=more&league=ompa",
+      "events": {
+        "freestyle": [
+          {
+            "date": "2025-06-04",
+            "seconds": 29.82,
+            "distance": 25,
+            "sourceTime": "29.82Y",
+            "meet": "MEAD_OMSC_AT_MVP_06042025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-11",
+            "seconds": 33.05,
+            "distance": 25,
+            "sourceTime": "36.69M",
+            "meet": "MEAD_AT_CCC_06112025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 28.61,
+            "distance": 25,
+            "sourceTime": "28.61Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 32.17,
+            "distance": 25,
+            "sourceTime": "32.17Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 30.76,
+            "distance": 25,
+            "sourceTime": "30.76Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-09",
+            "seconds": 29.04,
+            "distance": 25,
+            "sourceTime": "29.04Y",
+            "meet": "MRSC_AT_MEAD_07092025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-13",
+            "seconds": 40.3,
+            "distance": 25,
+            "sourceTime": "40.30Y",
+            "meet": "SPBRK_PENT_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 30.85,
+            "distance": 25,
+            "sourceTime": "30.85Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 26.98,
+            "distance": 25,
+            "sourceTime": "26.98Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 28.91,
+            "distance": 25,
+            "sourceTime": "28.91Y",
+            "meet": "SLEEPYB_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 31.3,
+            "distance": 25,
+            "sourceTime": "31.30Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-02",
+            "seconds": 25.31,
+            "distance": 25,
+            "sourceTime": "25.31Y",
+            "meet": "OMPA_2025",
+            "age": 5,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 22.29,
+            "distance": 25,
+            "sourceTime": "22.29Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-06",
+            "seconds": 23.36,
+            "distance": 25,
+            "sourceTime": "23.36Y",
+            "meet": "MEAD_CCC_AT_SH_06062026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 22.5,
+            "distance": 25,
+            "sourceTime": "22.50Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 23.01,
+            "distance": 25,
+            "sourceTime": "23.01Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 22.59,
+            "distance": 25,
+            "sourceTime": "22.59Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 6,
+            "type": "F"
+          }
+        ],
+        "breaststroke": [
+          {
+            "date": "2025-06-14",
+            "seconds": 48.69,
+            "distance": 25,
+            "sourceTime": "48.69Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 47.41,
+            "distance": 25,
+            "sourceTime": "47.41Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-13",
+            "seconds": 44.39,
+            "distance": 25,
+            "sourceTime": "44.39Y",
+            "meet": "SPBRK_PENT_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-06",
+            "seconds": 40.3,
+            "distance": 25,
+            "sourceTime": "40.30Y",
+            "meet": "MEAD_CCC_AT_SH_06062026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-17",
+            "seconds": 37.58,
+            "distance": 25,
+            "sourceTime": "37.58Y",
+            "meet": "MEAD_AT_PARK_06172026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-24",
+            "seconds": 35.32,
+            "distance": 25,
+            "sourceTime": "35.32Y",
+            "meet": "MCC_AT_MEAD_06242026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 33.4,
+            "distance": 25,
+            "sourceTime": "33.40Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 6,
+            "type": "F"
+          }
+        ],
+        "backstroke": [
+          {
+            "date": "2025-06-07",
+            "seconds": 38.13,
+            "distance": 25,
+            "sourceTime": "38.13Y",
+            "meet": "MEAD_OMSC_AT_MVP_06072025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-14",
+            "seconds": 44.51,
+            "distance": 25,
+            "sourceTime": "44.51Y",
+            "meet": "MVP_OMSC_AT_MEAD_06142025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-18",
+            "seconds": 47.89,
+            "distance": 25,
+            "sourceTime": "47.89Y",
+            "meet": "MEAD_AT_MVP_06182025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-06-21",
+            "seconds": 46.68,
+            "distance": 25,
+            "sourceTime": "46.68Y",
+            "meet": "PARK_AT_MEAD_06212025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-13",
+            "seconds": 38.61,
+            "distance": 25,
+            "sourceTime": "38.61Y",
+            "meet": "SPBRK_PENT_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 39.39,
+            "distance": 25,
+            "sourceTime": "39.39Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 35.97,
+            "distance": 25,
+            "sourceTime": "35.97Y",
+            "meet": "SLEEPYB_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 34.85,
+            "distance": 25,
+            "sourceTime": "34.85Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 31.9,
+            "distance": 25,
+            "sourceTime": "31.90Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-06",
+            "seconds": 33.05,
+            "distance": 25,
+            "sourceTime": "33.05Y",
+            "meet": "MEAD_CCC_AT_SH_06062026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 28.6,
+            "distance": 25,
+            "sourceTime": "28.60Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 30.61,
+            "distance": 25,
+            "sourceTime": "30.61Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 30.46,
+            "distance": 25,
+            "sourceTime": "30.46Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 6,
+            "type": "F"
+          }
+        ],
+        "butterfly": [
+          {
+            "date": "2025-07-09",
+            "seconds": 35.08,
+            "distance": 25,
+            "sourceTime": "35.08Y",
+            "meet": "MRSC_AT_MEAD_07092025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-13",
+            "seconds": 36.07,
+            "distance": 25,
+            "sourceTime": "36.07Y",
+            "meet": "SPBRK_PENT_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-16",
+            "seconds": 46.46,
+            "distance": 25,
+            "sourceTime": "46.46Y",
+            "meet": "SH_AT_MEAD_07162025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-19",
+            "seconds": 39.01,
+            "distance": 25,
+            "sourceTime": "39.01Y",
+            "meet": "MEAD_AT_OCC_07192025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-20",
+            "seconds": 39.46,
+            "distance": 25,
+            "sourceTime": "39.46Y",
+            "meet": "SLEEPYB_2025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-07-23",
+            "seconds": 43.4,
+            "distance": 25,
+            "sourceTime": "43.40Y",
+            "meet": "MEAD_INTRSQD_07232025",
+            "age": 5,
+            "type": "F"
+          },
+          {
+            "date": "2025-08-03",
+            "seconds": 29.91,
+            "distance": 25,
+            "sourceTime": "29.91Y",
+            "meet": "OMPA_2025",
+            "age": 5,
+            "type": "P"
+          },
+          {
+            "date": "2026-05-20",
+            "seconds": 28.83,
+            "distance": 25,
+            "sourceTime": "28.83Y",
+            "meet": "MEAD_TTRIALS_05202026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-10",
+            "seconds": 31.26,
+            "distance": 25,
+            "sourceTime": "31.26Y",
+            "meet": "CCC_AT_MEAD_06102026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-13",
+            "seconds": 30.89,
+            "distance": 25,
+            "sourceTime": "30.89Y",
+            "meet": "OMSC_AT_MEAD_06132026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-20",
+            "seconds": 29.05,
+            "distance": 25,
+            "sourceTime": "29.05Y",
+            "meet": "MEAD_AT_MRSC_06202026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-06-24",
+            "seconds": 30.67,
+            "distance": 25,
+            "sourceTime": "30.67Y",
+            "meet": "MCC_AT_MEAD_06242026",
+            "age": 6,
+            "type": "F"
+          },
+          {
+            "date": "2026-07-08",
+            "seconds": 28.02,
+            "distance": 25,
+            "sourceTime": "28.02Y",
+            "meet": "MVP_AT_MEAD_07082026",
+            "age": 6,
+            "type": "F"
+          }
+        ]
+      }
+    }
+  ]
+}

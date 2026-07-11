@@ -1,1 +1,23 @@
-# kids_swim_times
+# Swim Story
+
+A small static dashboard that turns the Martin swimmers’ public meet results into a long-view story. Each event gets its own chart. 25-yard swims are solid; 50-yard swims are halved and dashed so the trend remains comparable across the distance change.
+
+## Run it
+
+```bash
+npm install
+npx playwright install chromium   # first time only
+npm run scrape                     # refresh public/data/swim-times.json
+npm run dev
+```
+
+Then open the local URL printed by Vite. The site is static after the JSON file is generated, so `npm run build` produces a deployable `dist/` directory.
+
+## Checks
+
+```bash
+npm test
+npm run build
+```
+
+The scraper lives in [`scripts/scrape.ts`](scripts/scrape.ts). It uses Playwright to load each Acorn Swim Database page, walks the site’s event sections, skips non-times such as DQs, normalizes dates and converted times, and writes a readable checked-in JSON file. To add another swimmer, add a source entry to `SOURCES` and re-run `npm run scrape`.
