@@ -1,7 +1,8 @@
 export const EVENT_KEYS = ['freestyle', 'backstroke', 'breaststroke', 'butterfly', 'individual-medley'] as const;
 
 export type EventKey = (typeof EVENT_KEYS)[number];
-export type Distance = 25 | 50;
+// Keep this open-ended because the database includes events such as 100 IM.
+export type Distance = number;
 
 export type Swim = {
   date: string;
@@ -67,7 +68,7 @@ export function normalizePoints(swims: Swim[]): SwimPoint[] {
 
 export function eventFromLabel(label: string): { event: EventKey; distance: Distance } | null {
   const normalized = label.trim().toLowerCase().replace(/\s+/g, ' ');
-  const match = normalized.match(/^(25|50)\s+(freestyle|backstroke|breaststroke|butterfly|individual medley)$/);
+  const match = normalized.match(/^(\d+)\s+(freestyle|backstroke|breaststroke|butterfly|individual medley)$/);
   if (!match) return null;
   return {
     distance: Number(match[1]) as Distance,

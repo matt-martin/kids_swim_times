@@ -5,6 +5,7 @@ import {
   formatTime,
   normalizePoints,
   type EventKey,
+  type Swim,
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
@@ -112,26 +113,37 @@ function render() {
 
 function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>) {
   const hasData = swims.length > 0;
+  const labels = seriesLabels(swims);
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${event === 'individual-medley' ? 'IM' : event.slice(0, 2).toUpperCase()}</span></div>
-    ${hasData ? `<div class="legend"><span><i class="legend-line solid"></i>25 yd</span><span><i class="legend-line dashed"></i>50 yd ÷ 2</span></div><div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} times over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
+    ${hasData ? `<div class="legend"><span><i class="legend-line solid"></i>${labels.primaryLabel}</span>${labels.hasSplit ? '<span><i class="legend-line dashed"></i>50 yd ÷ 2</span>' : ''}</div><div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} times over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
+}
+
+function seriesLabels(swims: Swim[]) {
+  const primaryDistances = [...new Set(swims.filter((swim) => swim.distance !== 50).map((swim) => swim.distance))].sort((a, b) => a - b);
+  return {
+    primaryLabel: primaryDistances.map((distance) => `${distance} yd`).join(' / ') || 'Other distance',
+    hasSplit: swims.some((swim) => swim.distance === 50),
+  };
 }
 
 function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>): Chart {
   const points = normalizePoints(swims);
+  const labelsInfo = seriesLabels(swims);
   const canvas = document.querySelector<HTMLCanvasElement>(`[data-chart="${event}"]`)!;
   const labels = points.map((point) => point.date);
   const normal = points.map((point) => point.isSplit ? null : point.comparableSeconds);
   const split = points.map((point) => point.isSplit ? point.comparableSeconds : null);
+  const datasets = [
+    { label: labelsInfo.primaryLabel, data: normal, borderColor: '#ef765d', backgroundColor: '#ef765d', pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5, borderDash: [] as number[], tension: 0.22, spanGaps: false },
+  ];
+  if (labelsInfo.hasSplit) datasets.push({ label: '50 yd ÷ 2', data: split, borderColor: '#276c83', backgroundColor: '#276c83', pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5, borderDash: [7, 6], tension: 0.22, spanGaps: false });
   return new Chart(canvas, {
     type: 'line',
     data: {
       labels,
-      datasets: [
-        { label: '25 yd', data: normal, borderColor: '#ef765d', backgroundColor: '#ef765d', pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5, tension: 0.22, spanGaps: false },
-        { label: '50 yd ÷ 2', data: split, borderColor: '#276c83', backgroundColor: '#276c83', pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5, borderDash: [7, 6], tension: 0.22, spanGaps: false },
-      ],
+      datasets,
     },
     options: {
       responsive: true,
@@ -160,7 +172,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           reverse: true,
           grid: { color: 'rgba(9, 47, 67, 0.08)' },
           ticks: { color: '#68818b', callback: (value) => `${Number(value).toFixed(0)}s` },
-          title: { display: true, text: 'seconds / 25 yd  ·  faster ↑', color: '#68818b', font: { size: 11, weight: 'bold' } },
+          title: { display: true, text: `${event === 'individual-medley' ? 'seconds' : 'seconds / 25 yd'}  ·  faster ↑`, color: '#68818b', font: { size: 11, weight: 'bold' } },
           border: { display: false },
         },
       },
