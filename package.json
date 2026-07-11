@@ -1,0 +1,25 @@
+{
+  "name": "kids-swim-times",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "scrape": "tsx scripts/scrape.ts"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.9"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.13.0",
+    "jsdom": "^26.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  }
+}
