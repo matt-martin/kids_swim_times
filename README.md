@@ -20,7 +20,7 @@ Individual medley cards also report their best 100-yard time. Event badges use F
 
 ```bash
 npm install
-npx playwright install chromium   # first time only
+npx playwright install chromium webkit   # first time only
 npm run scrape                     # refresh public/data/swim-times.json
 npm run dev
 ```
@@ -40,6 +40,9 @@ https://matt-martin.github.io/kids_swim_times/
 ```bash
 npm test
 npm run build
+npm run test:e2e
 ```
+
+The Playwright responsive test checks desktop Chromium, Android Chrome, desktop WebKit, and iPhone Safari profiles. Each run attaches a full-page screenshot to the test report and verifies that charts do not create horizontal overflow or extend beyond their cards.
 
 The scraper lives in [`scripts/scrape.ts`](scripts/scrape.ts). It uses Playwright to load each Acorn Swim Database page, walks the site’s event sections, skips non-times such as DQs, normalizes dates and converted times, retains bronze/silver/gold time standards, and writes a readable checked-in JSON file. Standard-bearing results appear as colored stars in the charts. To add another swimmer, add a source entry to `SOURCES` and re-run `npm run scrape`.
