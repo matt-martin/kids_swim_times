@@ -86,6 +86,10 @@ export function formatTime(seconds: number): string {
   return minutes > 0 ? `${minutes}:${remainder.toFixed(2).padStart(5, '0')}` : remainder.toFixed(2);
 }
 
+export function speedInMilesPerHour(distance: Distance, seconds: number): number {
+  return (distance / seconds) * (60 * 60 / 1760);
+}
+
 export function normalizePoints(swims: Swim[]): SwimPoint[] {
   return swims
     .map((swim) => ({

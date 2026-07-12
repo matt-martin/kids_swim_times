@@ -2,7 +2,7 @@
 
 A small static dashboard that turns the Martin swimmers’ public meet results into a long-view story. Each event gets its own chart. 25-yard swims are solid; 50-yard swims are halved and dashed so the trend remains comparable across the distance change.
 
-The dashboard opens in **Times** view, showing actual 25-yard and 50-yard results plus the dashed 50-yard-divided-by-two comparison. Use **Speed** to see yards per second so distances compare naturally. Individual medley events such as 100 IM remain a single raw-time series.
+The dashboard opens in **Times** view, showing actual 25-yard and 50-yard results plus the dashed 50-yard-divided-by-two comparison. Use **Speed** to see miles per hour so distances compare naturally. Individual medley events such as 100 IM remain a single raw-time series.
 
 Charts shade alternating summers to make the seasonal gaps easy to scan. Hovering a point shows its recorded age and time-standard label when one exists. On touch devices, tapping a chart shows its basic tooltip; the synchronized hover guide and freeze control stay desktop-only.
 
@@ -12,7 +12,7 @@ Click a hovered date to freeze the guide across the charts; use any chart’s ci
 
 Event lines stay connected across meets where that event was not swum; the line bridges only the missing date slot and does not invent a data point.
 
-Each event card also summarizes its best speed or best available 25-yard, 50-yard, and comparable times. Comparable time is shown only when both 25- and 50-yard distances are present.
+Each event card also summarizes its best speed in miles per hour or best available 25-yard, 50-yard, and comparable times. Comparable time is shown only when both 25- and 50-yard distances are present.
 
 Individual medley cards also report their best 100-yard time. Event badges use FR, BK, BR, FLY, and IM.
 

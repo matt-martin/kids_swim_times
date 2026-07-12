@@ -6,6 +6,7 @@ import {
   eventShortLabel,
   formatTime,
   normalizePoints,
+  speedInMilesPerHour,
   type EventKey,
   standardColor,
   type StandardLevel,
@@ -175,7 +176,7 @@ function render() {
   const latestDate = points.at(-1)?.date;
   const sharedLabels = timelineLabels(points);
   const bestComparable = points.length ? Math.min(...points.map((point) => point.comparableSeconds)) : null;
-  const bestSpeed = points.length ? Math.max(...points.map((point) => point.distance / point.seconds)) : null;
+  const bestSpeed = points.length ? Math.max(...points.map((point) => speedInMilesPerHour(point.distance, point.seconds))) : null;
   const seasonCount = new Set(points.map((point) => point.date.slice(0, 4))).size;
   const bestValue = viewMode === 'speed'
     ? (bestSpeed === null ? '—' : bestSpeed.toFixed(2))
@@ -205,16 +206,16 @@ function render() {
           <div>
             <p class="eyebrow">${swimmer.name}'s swim story</p>
             <h2>The long view.</h2>
-            <p class="story-subtitle">${viewMode === 'speed' ? 'Speed is measured in yards per second, so 25- and 50-yard swims share one natural scale.' : 'Times view shows the actual 25-yard and 50-yard times, plus the 50-yard time divided by two for a fair comparison.'}</p>
+            <p class="story-subtitle">${viewMode === 'speed' ? 'Speed is measured in miles per hour, so 25- and 50-yard swims share one natural scale.' : 'Times view shows the actual 25-yard and 50-yard times, plus the 50-yard time divided by two for a fair comparison.'}</p>
           </div>
           <div class="story-tools">
             <div class="view-toggle" role="group" aria-label="Chart view">
-              <button class="view-button ${viewMode === 'speed' ? 'selected' : ''}" data-mode="speed" aria-pressed="${viewMode === 'speed'}">${chartModeLabel('speed')}</button>
               <button class="view-button ${viewMode === 'raw' ? 'selected' : ''}" data-mode="raw" aria-pressed="${viewMode === 'raw'}">${chartModeLabel('raw')}</button>
+              <button class="view-button ${viewMode === 'speed' ? 'selected' : ''}" data-mode="speed" aria-pressed="${viewMode === 'speed'}">${chartModeLabel('speed')}</button>
             </div>
             <div class="stats" aria-label="Swim story summary">
             <div class="stat"><strong>${seasonCount || '—'}</strong><span>summer${seasonCount === 1 ? '' : 's'}</span></div>
-            <div class="stat"><strong>${bestValue}</strong><span>${viewMode === 'speed' ? 'best yd / sec' : 'best comparable'}</span></div>
+            <div class="stat"><strong>${bestValue}</strong><span>${viewMode === 'speed' ? 'best mph' : 'best comparable'}</span></div>
             <div class="stat"><strong>${latestDate ? formatDate(latestDate).split(',')[0] : '—'}</strong><span>most recent swim</span></div>
             </div>
           </div>
@@ -309,7 +310,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           bodyColor: '#f5f2eb',
           callbacks: {
             title: (items) => formatDate(String(items[0].label)),
-            label: (item) => `${item.dataset.label}: ${mode === 'speed' ? `${Number(item.raw).toFixed(2)} yd/s` : `${formatTime(Number(item.raw))} sec`}`,
+            label: (item) => `${item.dataset.label}: ${mode === 'speed' ? `${Number(item.raw).toFixed(2)} mph` : `${formatTime(Number(item.raw))} sec`}`,
             afterLabel: (item) => timelinePoints[item.dataIndex] ? tooltipDetails(timelinePoints[item.dataIndex]!) : '',
           },
         },
@@ -325,7 +326,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           beginAtZero: axis.beginAtZero,
           grid: { color: 'rgba(9, 47, 67, 0.08)' },
           ticks: { color: '#68818b', callback: (value) => mode === 'speed' ? Number(value).toFixed(2) : `${Number(value).toFixed(0)}s` },
-          title: { display: true, text: mode === 'speed' ? 'yards / second  ·  faster ↑' : 'seconds  ·  faster ↑', color: '#68818b', font: { size: 11, weight: 'bold' } },
+          title: { display: true, text: mode === 'speed' ? 'miles per hour  ·  faster ↑' : 'seconds  ·  faster ↑', color: '#68818b', font: { size: 11, weight: 'bold' } },
           border: { display: false },
         },
       },

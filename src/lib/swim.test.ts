@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventFromLabel, eventShortLabel, formatTime, normalizePoints, parseTimeToSeconds, standardFromCell } from './swim';
+import { eventFromLabel, eventShortLabel, formatTime, normalizePoints, parseTimeToSeconds, speedInMilesPerHour, standardFromCell } from './swim';
 
 describe('swim time helpers', () => {
   it.each([
@@ -14,6 +14,10 @@ describe('swim time helpers', () => {
   it('formats minute and sub-minute times', () => {
     expect(formatTime(34.25)).toBe('34.25');
     expect(formatTime(62.5)).toBe('1:02.50');
+  });
+
+  it('converts swim speed from yards per second to miles per hour', () => {
+    expect(speedInMilesPerHour(25, 30)).toBeCloseTo(1.70455, 5);
   });
 
   it('maps the site labels to the five dashboard events', () => {

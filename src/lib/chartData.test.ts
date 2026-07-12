@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetricItems, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails } from './chartData';
-import { standardColor, type StandardLevel, type Swim } from './swim';
+import { speedInMilesPerHour, standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
   { date: '2024-06-01', seconds: 30, distance: 25, sourceTime: '30.00Y', meet: 'A', age: 8, type: 'F' },
@@ -16,6 +16,7 @@ describe('chart series', () => {
     expect(eventMetricItems(only25, 'raw')).toEqual([['Best 25', 30]]);
     expect(eventMetricItems(only50, 'raw')).toEqual([['Best 50', 50]]);
     expect(eventMetricItems(mixed, 'raw')).toEqual([['Best 25', 30], ['Best 50', 50], ['Best comparable', 25]]);
+    expect(eventMetricItems(mixed, 'speed')).toEqual([['Best mph', speedInMilesPerHour(50, 50)]]);
     expect(eventMetricItems(im, 'raw')).toEqual([['Best 100', 89.1]]);
   });
 
@@ -35,8 +36,8 @@ describe('chart series', () => {
   });
 
   it('calculates best speed and best raw/comparable times per event', () => {
-    expect(eventMetrics(swims)).toEqual({ bestSpeed: 1, best25: 30, best50: 50, best100: null, bestComparable: 25 });
-    expect(eventMetrics([{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }])).toEqual({ bestSpeed: 100 / 89.1, best25: null, best50: null, best100: 89.1, bestComparable: 89.1 });
+    expect(eventMetrics(swims)).toEqual({ bestSpeed: speedInMilesPerHour(50, 50), best25: 30, best50: 50, best100: null, bestComparable: 25 });
+    expect(eventMetrics([{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }])).toEqual({ bestSpeed: speedInMilesPerHour(100, 89.1), best25: null, best50: null, best100: 89.1, bestComparable: 89.1 });
   });
 
   it('connects a series across dates where its event has no result', () => {
@@ -49,7 +50,7 @@ describe('chart series', () => {
       { ...swims[0], date: '2023-06-01' },
       swims[0],
     ])).toEqual(['2023-06-01', '2024-06-01', '2025-06-01']);
-    expect(alignSeriesToTimeline(chartSeries(swims, 'speed'), swims.map((swim) => swim.date), ['2023-06-01', '2024-06-01', '2025-06-01'])[0].values).toEqual([null, 25 / 30, 1]);
+    expect(alignSeriesToTimeline(chartSeries(swims, 'speed'), swims.map((swim) => swim.date), ['2023-06-01', '2024-06-01', '2025-06-01'])[0].values).toEqual([null, speedInMilesPerHour(25, 30), speedInMilesPerHour(50, 50)]);
   });
 
   it('clamps a hovered chart position to the shared timeline', () => {
@@ -80,11 +81,11 @@ describe('chart series', () => {
     expect(chartAxis('raw')).toEqual({ reverse: false, beginAtZero: true });
   });
 
-  it('turns mixed-distance swims into one comparable yards-per-second series', () => {
+  it('turns mixed-distance swims into one comparable miles-per-hour series', () => {
     expect(chartSeries(swims, 'speed')).toEqual([{
       id: 'speed',
-      label: 'yards / second',
-      values: [25 / 30, 1],
+      label: 'miles per hour',
+      values: [speedInMilesPerHour(25, 30), speedInMilesPerHour(50, 50)],
       color: 'coral',
       dashed: false,
     }]);

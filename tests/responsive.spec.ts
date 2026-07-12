@@ -80,6 +80,17 @@ test('event charts stay inside the viewport on every browser profile', async ({ 
   }
 });
 
+test('keeps Times first and describes speed in miles per hour', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('[data-chart]').first()).toBeVisible();
+  await expect(page.locator('[data-mode]')).toHaveText(['Times', 'Speed']);
+
+  await page.locator('[data-mode="speed"]').click();
+  await expect(page.locator('.story-subtitle')).toContainText('miles per hour');
+  await expect(page.locator('.legend').first()).toContainText('miles per hour');
+  await expect(page.locator('.stats .stat').nth(1)).toContainText('best mph');
+});
+
 test('touch profiles use simple tap interactions instead of freeze controls', async ({ page }, testInfo) => {
   test.skip(!['android-chrome', 'iphone-safari'].includes(testInfo.project.name), 'touch behavior only');
 

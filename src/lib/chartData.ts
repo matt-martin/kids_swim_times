@@ -1,4 +1,4 @@
-import { normalizePoints, type Swim } from './swim';
+import { normalizePoints, speedInMilesPerHour, type Swim } from './swim';
 
 export type ChartMode = 'speed' | 'raw';
 export const DEFAULT_CHART_MODE: ChartMode = 'raw';
@@ -62,7 +62,7 @@ export function eventMetrics(swims: Swim[]): EventMetrics {
   const points = normalizePoints(swims);
   const minimum = (values: number[]) => values.length ? Math.min(...values) : null;
   return {
-    bestSpeed: points.length ? Math.max(...points.map((point) => point.distance / point.seconds)) : null,
+    bestSpeed: points.length ? Math.max(...points.map((point) => speedInMilesPerHour(point.distance, point.seconds))) : null,
     best25: minimum(points.filter((point) => point.distance === 25).map((point) => point.seconds)),
     best50: minimum(points.filter((point) => point.distance === 50).map((point) => point.seconds)),
     best100: minimum(points.filter((point) => point.distance === 100).map((point) => point.seconds)),
@@ -73,7 +73,7 @@ export function eventMetrics(swims: Swim[]): EventMetrics {
 export function eventMetricItems(metrics: EventMetrics, mode: ChartMode): Array<[string, number]> {
   if (mode === 'speed') {
     return [
-      ...(metrics.bestSpeed === null ? [] : [['Best yd/sec', metrics.bestSpeed] as [string, number]]),
+      ...(metrics.bestSpeed === null ? [] : [['Best mph', metrics.bestSpeed] as [string, number]]),
       ...(metrics.best100 === null ? [] : [['Best 100', metrics.best100] as [string, number]]),
     ];
   }
@@ -116,8 +116,8 @@ export function chartSeries(swims: Swim[], mode: ChartMode): ChartSeries[] {
   if (mode === 'speed') {
     return [{
       id: 'speed',
-      label: 'yards / second',
-      values: points.map((point) => point.distance / point.seconds),
+      label: 'miles per hour',
+      values: points.map((point) => speedInMilesPerHour(point.distance, point.seconds)),
       color: 'coral',
       dashed: false,
     }];
