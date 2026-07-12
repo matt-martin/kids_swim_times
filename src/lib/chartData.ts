@@ -36,6 +36,17 @@ export function chartLineOptions() {
   return { spanGaps: true };
 }
 
+export function eventMetrics(swims: Swim[]) {
+  const points = normalizePoints(swims);
+  const minimum = (values: number[]) => values.length ? Math.min(...values) : null;
+  return {
+    bestSpeed: points.length ? Math.max(...points.map((point) => point.distance / point.seconds)) : null,
+    best25: minimum(points.filter((point) => point.distance === 25).map((point) => point.seconds)),
+    best50: minimum(points.filter((point) => point.distance === 50).map((point) => point.seconds)),
+    bestComparable: minimum(points.map((point) => point.comparableSeconds)),
+  };
+}
+
 export function seasonBands(labels: string[]): SeasonBand[] {
   if (!labels.length) return [];
   const bands: SeasonBand[] = [];

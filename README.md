@@ -10,6 +10,8 @@ All event charts for a selected kid share that kid’s full date range. Hovering
 
 Event lines stay connected across meets where that event was not swum; the line bridges only the missing date slot and does not invent a data point.
 
+Each event card also summarizes its best speed or best available 25-yard, 50-yard, and comparable times.
+
 ## Run it
 
 ```bash

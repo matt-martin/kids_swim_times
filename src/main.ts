@@ -11,7 +11,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartSeries, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -192,12 +192,21 @@ function render() {
 function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode) {
   const hasData = swims.length > 0;
   const series = chartSeries(swims, mode);
+  const metrics = eventMetrics(swims);
+  const metricItems: Array<[string, number | null]> = mode === 'speed'
+    ? [['Best yd/sec', metrics.bestSpeed]]
+    : [['Best 25', metrics.best25], ['Best 50', metrics.best50], ['Best comparable', metrics.bestComparable]];
+  const metricMarkup = metricItems
+    .filter(([, value]) => value !== null)
+    .map(([label, value]) => `<div class="event-metric"><strong>${mode === 'speed' ? value!.toFixed(2) : formatTime(value!)}</strong><span>${label}</span></div>`)
+    .join('');
   const standards = [...new Set(swims.flatMap((swim) => swim.standard ? [swim.standard.level] : []))] as StandardLevel[];
   const standardLegend = standards.length
     ? `<div class="standard-legend">${standards.map((level) => `<span><i class="standard-star ${level}">★</i>${level} standard</span>`).join('')}</div>`
     : '';
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${event === 'individual-medley' ? 'IM' : event.slice(0, 2).toUpperCase()}</span></div>
+    ${hasData ? `<div class="event-metrics">${metricMarkup}</div>` : ''}
     ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
 }
