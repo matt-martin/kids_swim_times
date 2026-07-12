@@ -19,6 +19,7 @@ import './styles.css';
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
+const isTouchPrimaryInput = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 let data: AppData | null = null;
 let selectedId = '';
 let viewMode: ChartMode = DEFAULT_CHART_MODE;
@@ -63,6 +64,7 @@ const summerBackgroundPlugin: Plugin<'line'> = {
 const sharedHoverPlugin: Plugin<'line'> = {
   id: 'sharedHover',
   afterEvent(chart, args) {
+    if (isTouchPrimaryInput) return;
     const { event } = args;
     if (event.type === 'mousemove' && args.inChartArea) {
       const xPixel = event.x;
@@ -232,10 +234,11 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
   const standardLegend = standards.length
     ? `<div class="standard-legend">${standards.map((level) => `<span><i class="standard-star ${level}">★</i>${level} standard</span>`).join('')}</div>`
     : '';
+  const unfreezeMarkup = isTouchPrimaryInput ? '' : '<button class="unfreeze-button" data-action="unfreeze" aria-label="Unfreeze date guide" aria-hidden="true">×</button>';
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${eventShortLabel(event)}</span></div>
     ${hasData ? `<div class="event-metrics">${metricMarkup}</div>` : ''}
-    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas><button class="unfreeze-button" data-action="unfreeze" aria-label="Unfreeze date guide" aria-hidden="true">×</button></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
+    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas>${unfreezeMarkup}</div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
 }
 
@@ -270,6 +273,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      events: isTouchPrimaryInput ? ['touchstart'] : ['mousemove', 'mouseout', 'click'],
       interaction: { intersect: false, mode: 'index' },
       plugins: {
         legend: { display: false },

@@ -51,3 +51,26 @@ test('event charts stay inside the viewport on every browser profile', async ({ 
     expect(chart.canvas.width, 'the chart canvas must have a measurable width').toBeGreaterThan(0);
   }
 });
+
+test('touch profiles use simple tap interactions instead of freeze controls', async ({ page }, testInfo) => {
+  test.skip(!['android-chrome', 'iphone-safari'].includes(testInfo.project.name), 'touch behavior only');
+
+  await page.goto('/');
+  const chart = page.locator('[data-chart]').first();
+  await expect(chart).toBeVisible();
+  await expect(page.locator('[data-action="unfreeze"]')).toHaveCount(0);
+
+  const beforeTap = await chart.screenshot();
+  const box = await chart.boundingBox();
+  expect(box).not.toBeNull();
+  await chart.tap({ position: { x: Math.round(box!.width / 2), y: Math.round(box!.height / 2) } });
+  await expect.poll(async () => Buffer.compare(beforeTap, await chart.screenshot())).not.toBe(0);
+});
+
+test('desktop profiles keep the freeze interaction', async ({ page }, testInfo) => {
+  test.skip(['android-chrome', 'iphone-safari'].includes(testInfo.project.name), 'desktop behavior only');
+
+  await page.goto('/');
+  await expect(page.locator('[data-chart]').first()).toBeVisible();
+  await expect(page.locator('[data-action="unfreeze"]')).toHaveCount(4);
+});

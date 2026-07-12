@@ -4,7 +4,7 @@ A small static dashboard that turns the Martin swimmers’ public meet results i
 
 The dashboard opens in **Times** view, showing actual 25-yard and 50-yard results plus the dashed 50-yard-divided-by-two comparison. Use **Speed** to see yards per second so distances compare naturally. Individual medley events such as 100 IM remain a single raw-time series.
 
-Charts shade alternating summers to make the seasonal gaps easy to scan. Hovering a point shows its recorded age and time-standard label when one exists.
+Charts shade alternating summers to make the seasonal gaps easy to scan. Hovering a point shows its recorded age and time-standard label when one exists. On touch devices, tapping a chart shows its basic tooltip; the synchronized hover guide and freeze control stay desktop-only.
 
 All event charts for a selected kid share that kid’s full date range. Hovering any chart also draws a synchronized vertical guide across the other event charts.
 
