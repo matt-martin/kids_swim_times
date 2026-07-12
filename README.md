@@ -8,6 +8,8 @@ Charts shade alternating summers to make the seasonal gaps easy to scan. Hoverin
 
 All event charts for a selected kid share that kid’s full date range. Hovering any chart also draws a synchronized vertical guide across the other event charts.
 
+Click a hovered date to freeze the guide across the charts; use any chart’s circular × control just below its x-axis to release it.
+
 Event lines stay connected across meets where that event was not swum; the line bridges only the missing date slot and does not invent a data point.
 
 Each event card also summarizes its best speed or best available 25-yard, 50-yard, and comparable times.

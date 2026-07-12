@@ -12,7 +12,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails, type ChartMode, type HoverState } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -22,7 +22,7 @@ let data: AppData | null = null;
 let selectedId = '';
 let viewMode: ChartMode = DEFAULT_CHART_MODE;
 let charts: Chart[] = [];
-let sharedHoverIndex: number | null = null;
+let sharedHoverState: HoverState = { index: null, locked: false };
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const axisDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' });
@@ -67,21 +67,20 @@ const sharedHoverPlugin: Plugin<'line'> = {
       const xPixel = event.x;
       const value = xPixel == null ? null : chart.scales.x.getValueForPixel(xPixel);
       const index = value == null ? null : nearestTimelineIndex(value, chart.data.labels?.length ?? 0);
-      if (index !== sharedHoverIndex) {
-        sharedHoverIndex = index;
-        charts.forEach((item) => item.draw());
-      }
-    } else if (event.type === 'mouseout' && sharedHoverIndex !== null) {
-      sharedHoverIndex = null;
-      charts.forEach((item) => item.draw());
+      applySharedHoverState(nextHoverState(sharedHoverState, 'move', index));
+    } else if (event.type === 'click' && args.inChartArea) {
+      applySharedHoverState(nextHoverState(sharedHoverState, 'click', sharedHoverState.index));
+    } else if (event.type === 'mouseout') {
+      applySharedHoverState(nextHoverState(sharedHoverState, 'leave', null));
     }
   },
   afterDraw(chart) {
-    if (sharedHoverIndex === null) return;
+    if (sharedHoverState.index === null) return;
     const { chartArea, ctx, scales } = chart;
     const x = scales.x;
     if (!chartArea || !x) return;
-    const pixel = x.getPixelForValue(sharedHoverIndex);
+    positionFreezeButton(chart);
+    const pixel = x.getPixelForValue(sharedHoverState.index);
     ctx.save();
     ctx.strokeStyle = 'rgba(9, 47, 67, 0.45)';
     ctx.lineWidth = 1;
@@ -93,6 +92,30 @@ const sharedHoverPlugin: Plugin<'line'> = {
     ctx.restore();
   },
 };
+
+function applySharedHoverState(next: HoverState) {
+  if (next.index === sharedHoverState.index && next.locked === sharedHoverState.locked) return;
+  sharedHoverState = next;
+  charts.forEach((item) => item.draw());
+  updateFreezeButton();
+}
+
+function updateFreezeButton() {
+  app.querySelectorAll<HTMLButtonElement>('[data-action="unfreeze"]').forEach((button) => {
+    button.classList.toggle('visible', sharedHoverState.locked);
+    button.setAttribute('aria-hidden', String(!sharedHoverState.locked));
+  });
+}
+
+function positionFreezeButton(chart: Chart) {
+  const button = chart.canvas.parentElement?.querySelector<HTMLButtonElement>('[data-action="unfreeze"]');
+  const x = chart.scales.x;
+  const wrap = chart.canvas.parentElement;
+  if (!button || !x || !wrap || sharedHoverState.index === null) return;
+  const canvasRect = chart.canvas.getBoundingClientRect();
+  const wrapRect = wrap.getBoundingClientRect();
+  button.style.left = `${x.getPixelForValue(sharedHoverState.index) + canvasRect.left - wrapRect.left}px`;
+}
 
 function renderLoading() {
   app.innerHTML = '<main class="shell loading"><div class="loader" aria-label="Loading swim times"></div><p>Pulling the swim story together…</p></main>';
@@ -117,7 +140,7 @@ function render() {
   if (!data) return;
   charts.forEach((chart) => chart.destroy());
   charts = [];
-  sharedHoverIndex = null;
+  sharedHoverState = { index: null, locked: false };
   const swimmer = getSelected();
   selectedId = swimmer.id;
   const points = allPoints(swimmer);
@@ -184,6 +207,11 @@ function render() {
   app.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach((button) => {
     button.addEventListener('click', () => { viewMode = button.dataset.mode as ChartMode; render(); });
   });
+  app.querySelectorAll<HTMLButtonElement>('[data-action="unfreeze"]').forEach((button) => {
+    button.addEventListener('click', () => {
+      applySharedHoverState(nextHoverState(sharedHoverState, 'unfreeze', null));
+    });
+  });
   EVENT_KEYS.forEach((event) => {
     const swims = swimmer.events[event] ?? [];
     if (swims.length) charts.push(createChart(event, swims, viewMode, sharedLabels));
@@ -214,7 +242,7 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${eventShortLabel(event)}</span></div>
     ${hasData ? `<div class="event-metrics">${metricMarkup}</div>` : ''}
-    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
+    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas><button class="unfreeze-button" data-action="unfreeze" aria-label="Unfreeze date guide" aria-hidden="true">×</button></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
 }
 

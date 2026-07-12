@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails } from './chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails } from './chartData';
 import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,15 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('freezes the shared guide on click until explicitly unfrozen', () => {
+    const initial = { index: null, locked: false };
+    const hovered = nextHoverState(initial, 'move', 2);
+    const locked = nextHoverState(hovered, 'click', 2);
+    expect(locked).toEqual({ index: 2, locked: true });
+    expect(nextHoverState(locked, 'move', 4)).toEqual(locked);
+    expect(nextHoverState(locked, 'unfreeze', null)).toEqual(initial);
+  });
+
   it('defaults to Times and labels the mode toggle plainly', () => {
     expect(DEFAULT_CHART_MODE).toBe('raw');
     expect(chartModeLabel('raw')).toBe('Times');

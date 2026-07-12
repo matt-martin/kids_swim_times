@@ -13,9 +13,18 @@ export type ChartSeries = {
 };
 
 export type SeasonBand = { year: string; start: number; end: number; alternate: boolean };
+export type HoverState = { index: number | null; locked: boolean };
+export type HoverEvent = 'move' | 'leave' | 'click' | 'unfreeze';
 
 export function chartModeLabel(mode: ChartMode): string {
   return mode === 'raw' ? 'Times' : 'Speed';
+}
+
+export function nextHoverState(state: HoverState, event: HoverEvent, index: number | null): HoverState {
+  if (event === 'unfreeze') return { index: null, locked: false };
+  if (event === 'click') return index === null ? state : { index, locked: true };
+  if (state.locked) return state;
+  return event === 'move' ? { index, locked: false } : { index: null, locked: false };
 }
 
 export function timelineLabels(swims: Swim[]): string[] {
