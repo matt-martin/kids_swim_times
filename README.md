@@ -4,6 +4,8 @@ A small static dashboard that turns the Martin swimmers’ public meet results i
 
 The dashboard opens in **Speed** view, using yards per second so distances compare naturally. Use **Raw times** to see separate 25-yard, 50-yard, and dashed 50-yard-divided-by-two series. Individual medley events such as 100 IM remain a single raw-time series.
 
+Charts shade alternating summers to make the seasonal gaps easy to scan. Hovering a point shows its recorded age and time-standard label when one exists.
+
 ## Run it
 
 ```bash

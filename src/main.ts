@@ -1,4 +1,5 @@
 import Chart from 'chart.js/auto';
+import type { Plugin } from 'chart.js';
 import {
   EVENT_KEYS,
   eventLabel,
@@ -10,7 +11,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { chartAxis, chartSeries, type ChartMode } from './lib/chartData';
+import { chartAxis, chartSeries, seasonBands, tooltipDetails, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -32,6 +33,29 @@ function formatAxisDate(value: string): string {
   const date = new Date(`${value}T12:00:00`);
   return `${axisDateFormatter.format(date)} ’${String(date.getFullYear()).slice(-2)}`;
 }
+
+const summerBackgroundPlugin: Plugin<'line'> = {
+  id: 'summerBackground',
+  beforeDraw(chart) {
+    const { chartArea, ctx, scales } = chart;
+    const x = scales.x;
+    if (!chartArea || !x) return;
+    const labels = (chart.data.labels ?? []).map(String);
+    ctx.save();
+    for (const band of seasonBands(labels)) {
+      if (!band.alternate) continue;
+      const start = band.start === 0
+        ? chartArea.left
+        : (x.getPixelForValue(band.start - 1) + x.getPixelForValue(band.start)) / 2;
+      const end = band.end === labels.length - 1
+        ? chartArea.right
+        : (x.getPixelForValue(band.end) + x.getPixelForValue(band.end + 1)) / 2;
+      ctx.fillStyle = 'rgba(39, 108, 131, 0.055)';
+      ctx.fillRect(start, chartArea.top, end - start, chartArea.bottom - chartArea.top);
+    }
+    ctx.restore();
+  },
+};
 
 function renderLoading() {
   app.innerHTML = '<main class="shell loading"><div class="loader" aria-label="Loading swim times"></div><p>Pulling the swim story together…</p></main>';
@@ -173,6 +197,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
       interaction: { intersect: false, mode: 'index' },
       plugins: {
         legend: { display: false },
+        // Chart.js invokes this before drawing the grid and data, keeping the summer bands behind both.
         tooltip: {
           padding: 12,
           backgroundColor: '#092f43',
@@ -181,6 +206,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           callbacks: {
             title: (items) => formatDate(String(items[0].label)),
             label: (item) => `${item.dataset.label}: ${mode === 'speed' ? `${Number(item.raw).toFixed(2)} yd/s` : `${formatTime(Number(item.raw))} sec`}`,
+            afterLabel: (item) => tooltipDetails(points[item.dataIndex]),
           },
         },
       },
@@ -200,6 +226,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
         },
       },
     },
+    plugins: [summerBackgroundPlugin],
   });
 }
 

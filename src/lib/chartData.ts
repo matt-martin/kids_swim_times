@@ -11,6 +11,28 @@ export type ChartSeries = {
   dashed: boolean;
 };
 
+export type SeasonBand = { year: string; start: number; end: number; alternate: boolean };
+
+export function seasonBands(labels: string[]): SeasonBand[] {
+  if (!labels.length) return [];
+  const bands: SeasonBand[] = [];
+  let start = 0;
+  let year = labels[0].slice(0, 4);
+  for (let index = 1; index <= labels.length; index += 1) {
+    const nextYear = labels[index]?.slice(0, 4);
+    if (index === labels.length || nextYear !== year) {
+      bands.push({ year, start, end: index - 1, alternate: bands.length % 2 === 1 });
+      start = index;
+      year = nextYear;
+    }
+  }
+  return bands;
+}
+
+export function tooltipDetails(point: Swim): string {
+  return `Age ${point.age}${point.standard ? ` · ${point.standard.label}` : ''}`;
+}
+
 export function chartAxis(mode: ChartMode) {
   return { reverse: false, beginAtZero: mode === 'raw' };
 }

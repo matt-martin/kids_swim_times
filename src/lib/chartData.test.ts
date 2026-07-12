@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chartAxis, chartSeries } from './chartData';
+import { chartAxis, chartSeries, seasonBands, tooltipDetails } from './chartData';
 import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,19 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('groups contiguous result dates into alternating summer bands', () => {
+    expect(seasonBands(['2024-06-01', '2024-07-01', '2025-06-01', '2026-06-01'])).toEqual([
+      { year: '2024', start: 0, end: 1, alternate: false },
+      { year: '2025', start: 2, end: 2, alternate: true },
+      { year: '2026', start: 3, end: 3, alternate: false },
+    ]);
+  });
+
+  it('includes age and an attached standard in point details', () => {
+    expect(tooltipDetails({ date: '2025-06-01', seconds: 30, distance: 25, sourceTime: '30.00Y', meet: 'A', age: 9, type: 'F' })).toBe('Age 9');
+    expect(tooltipDetails({ date: '2025-06-01', seconds: 30, distance: 25, sourceTime: '30.00Y', meet: 'A', age: 9, type: 'F', standard: { level: 'bronze', label: '9-10 Bronze' } })).toBe('Age 9 · 9-10 Bronze');
+  });
+
   it('maps time standards to their visual star colors', () => {
     expect((['bronze', 'silver', 'gold'] as StandardLevel[]).map(standardColor)).toEqual(['#b8794a', '#93a4ad', '#d8a72b']);
   });
