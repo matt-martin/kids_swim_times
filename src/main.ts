@@ -5,10 +5,10 @@ import {
   formatTime,
   normalizePoints,
   type EventKey,
-  type Swim,
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
+import { chartSeries, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -16,6 +16,7 @@ type AppData = { fetchedAt: string; swimmers: Swimmer[] };
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let data: AppData | null = null;
 let selectedId = '';
+let viewMode: ChartMode = 'speed';
 let charts: Chart[] = [];
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -58,8 +59,12 @@ function render() {
   const points = allPoints(swimmer);
   const firstDate = points[0]?.date;
   const latestDate = points.at(-1)?.date;
-  const best = points.length ? Math.min(...points.map((point) => point.comparableSeconds)) : null;
+  const bestComparable = points.length ? Math.min(...points.map((point) => point.comparableSeconds)) : null;
+  const bestSpeed = points.length ? Math.max(...points.map((point) => point.distance / point.seconds)) : null;
   const seasonCount = new Set(points.map((point) => point.date.slice(0, 4))).size;
+  const bestValue = viewMode === 'speed'
+    ? (bestSpeed === null ? '—' : bestSpeed.toFixed(2))
+    : (bestComparable === null ? '—' : formatTime(bestComparable));
 
   app.innerHTML = `
     <div class="site-shell">
@@ -85,17 +90,23 @@ function render() {
           <div>
             <p class="eyebrow">${swimmer.name}'s swim story</p>
             <h2>The long view.</h2>
-            <p class="story-subtitle">Times are shown as seconds per 25 yards. A dashed line halves 50-yard swims so the story stays fair as the distance grows.</p>
+            <p class="story-subtitle">${viewMode === 'speed' ? 'Speed is measured in yards per second, so 25- and 50-yard swims share one natural scale.' : 'Raw view shows the actual 25-yard and 50-yard times, plus the 50-yard time divided by two for a fair comparison.'}</p>
           </div>
-          <div class="stats" aria-label="Swim story summary">
+          <div class="story-tools">
+            <div class="view-toggle" role="group" aria-label="Chart view">
+              <button class="view-button ${viewMode === 'speed' ? 'selected' : ''}" data-mode="speed" aria-pressed="${viewMode === 'speed'}">Speed</button>
+              <button class="view-button ${viewMode === 'raw' ? 'selected' : ''}" data-mode="raw" aria-pressed="${viewMode === 'raw'}">Raw times</button>
+            </div>
+            <div class="stats" aria-label="Swim story summary">
             <div class="stat"><strong>${seasonCount || '—'}</strong><span>summer${seasonCount === 1 ? '' : 's'}</span></div>
-            <div class="stat"><strong>${best === null ? '—' : formatTime(best)}</strong><span>fastest / 25 yd</span></div>
+            <div class="stat"><strong>${bestValue}</strong><span>${viewMode === 'speed' ? 'best yd / sec' : 'best comparable'}</span></div>
             <div class="stat"><strong>${latestDate ? formatDate(latestDate).split(',')[0] : '—'}</strong><span>most recent swim</span></div>
+            </div>
           </div>
         </section>
 
         <section class="charts-grid" aria-label="${swimmer.name}'s event charts">
-          ${EVENT_KEYS.map((event) => chartCard(event, swimmer.events[event] ?? [])).join('')}
+          ${EVENT_KEYS.map((event) => chartCard(event, swimmer.events[event] ?? [], viewMode)).join('')}
         </section>
         <p class="source-note">${firstDate ? `Showing ${formatDate(firstDate)} through ${latestDate ? formatDate(latestDate) : ''}.` : 'No results have been recorded yet.'} Data refreshed ${formatDate(data.fetchedAt.slice(0, 10))} from <a href="${swimmer.sourceUrl}" target="_blank" rel="noreferrer">Acorn Swim Database</a>.</p>
       </main>
@@ -105,40 +116,41 @@ function render() {
   app.querySelectorAll<HTMLButtonElement>('[data-kid]').forEach((button) => {
     button.addEventListener('click', () => { selectedId = button.dataset.kid!; render(); });
   });
+  app.querySelectorAll<HTMLButtonElement>('[data-mode]').forEach((button) => {
+    button.addEventListener('click', () => { viewMode = button.dataset.mode as ChartMode; render(); });
+  });
   EVENT_KEYS.forEach((event) => {
     const swims = swimmer.events[event] ?? [];
-    if (swims.length) charts.push(createChart(event, swims));
+    if (swims.length) charts.push(createChart(event, swims, viewMode));
   });
 }
 
-function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>) {
+function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode) {
   const hasData = swims.length > 0;
-  const labels = seriesLabels(swims);
+  const series = chartSeries(swims, mode);
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${event === 'individual-medley' ? 'IM' : event.slice(0, 2).toUpperCase()}</span></div>
-    ${hasData ? `<div class="legend"><span><i class="legend-line solid"></i>${labels.primaryLabel}</span>${labels.hasSplit ? '<span><i class="legend-line dashed"></i>50 yd ÷ 2</span>' : ''}</div><div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} times over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
+    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div><div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
 }
 
-function seriesLabels(swims: Swim[]) {
-  const primaryDistances = [...new Set(swims.filter((swim) => swim.distance !== 50).map((swim) => swim.distance))].sort((a, b) => a - b);
-  return {
-    primaryLabel: primaryDistances.map((distance) => `${distance} yd`).join(' / ') || 'Other distance',
-    hasSplit: swims.some((swim) => swim.distance === 50),
-  };
-}
-
-function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>): Chart {
+function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode): Chart {
   const points = normalizePoints(swims);
-  const labelsInfo = seriesLabels(swims);
+  const series = chartSeries(swims, mode);
   const canvas = document.querySelector<HTMLCanvasElement>(`[data-chart="${event}"]`)!;
   const labels = points.map((point) => point.date);
-  const normal = points.map((point) => point.isSplit ? null : point.comparableSeconds);
-  const split = points.map((point) => point.isSplit ? point.comparableSeconds : null);
-  const datasets = [
-    { label: labelsInfo.primaryLabel, data: normal, borderColor: '#ef765d', backgroundColor: '#ef765d', pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5, borderDash: [] as number[], tension: 0.22, spanGaps: false },
-  ];
-  if (labelsInfo.hasSplit) datasets.push({ label: '50 yd ÷ 2', data: split, borderColor: '#276c83', backgroundColor: '#276c83', pointRadius: 3.5, pointHoverRadius: 6, borderWidth: 2.5, borderDash: [7, 6], tension: 0.22, spanGaps: false });
+  const datasets = series.map((item) => ({
+    label: item.label,
+    data: item.values,
+    borderColor: item.color === 'coral' ? '#ef765d' : '#276c83',
+    backgroundColor: item.color === 'coral' ? '#ef765d' : '#276c83',
+    pointRadius: 3.5,
+    pointHoverRadius: 6,
+    borderWidth: 2.5,
+    borderDash: item.dashed ? [7, 6] : [],
+    tension: 0.22,
+    spanGaps: false,
+  }));
   return new Chart(canvas, {
     type: 'line',
     data: {
@@ -158,7 +170,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           bodyColor: '#f5f2eb',
           callbacks: {
             title: (items) => formatDate(String(items[0].label)),
-            label: (item) => `${item.dataset.label}: ${formatTime(Number(item.raw))} sec`,
+            label: (item) => `${item.dataset.label}: ${mode === 'speed' ? `${Number(item.raw).toFixed(2)} yd/s` : `${formatTime(Number(item.raw))} sec`}`,
           },
         },
       },
@@ -169,10 +181,10 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           border: { display: false },
         },
         y: {
-          reverse: true,
+          reverse: mode === 'raw',
           grid: { color: 'rgba(9, 47, 67, 0.08)' },
-          ticks: { color: '#68818b', callback: (value) => `${Number(value).toFixed(0)}s` },
-          title: { display: true, text: `${event === 'individual-medley' ? 'seconds' : 'seconds / 25 yd'}  ·  faster ↑`, color: '#68818b', font: { size: 11, weight: 'bold' } },
+          ticks: { color: '#68818b', callback: (value) => mode === 'speed' ? Number(value).toFixed(2) : `${Number(value).toFixed(0)}s` },
+          title: { display: true, text: mode === 'speed' ? 'yards / second  ·  faster ↑' : 'seconds  ·  faster ↑', color: '#68818b', font: { size: 11, weight: 'bold' } },
           border: { display: false },
         },
       },

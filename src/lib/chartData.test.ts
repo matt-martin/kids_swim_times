@@ -1,0 +1,35 @@
+import { describe, expect, it } from 'vitest';
+import { chartSeries } from './chartData';
+import type { Swim } from './swim';
+
+const swims: Swim[] = [
+  { date: '2024-06-01', seconds: 30, distance: 25, sourceTime: '30.00Y', meet: 'A', age: 8, type: 'F' },
+  { date: '2025-06-01', seconds: 50, distance: 50, sourceTime: '50.00Y', meet: 'B', age: 9, type: 'F' },
+];
+
+describe('chart series', () => {
+  it('turns mixed-distance swims into one comparable yards-per-second series', () => {
+    expect(chartSeries(swims, 'speed')).toEqual([{
+      id: 'speed',
+      label: 'yards / second',
+      values: [25 / 30, 1],
+      color: 'coral',
+      dashed: false,
+    }]);
+  });
+
+  it('keeps raw 25, raw 50, and halved-50 series distinct', () => {
+    expect(chartSeries(swims, 'raw')).toEqual([
+      { id: '25', label: '25 yd', values: [30, null], color: 'coral', dashed: false },
+      { id: '50', label: '50 yd', values: [null, 50], color: 'blue', dashed: false },
+      { id: '50-per-25', label: '50 yd ÷ 2', values: [null, 25], color: 'coral', dashed: true },
+    ]);
+  });
+
+  it('leaves a 100-yard individual medley as one raw-time series', () => {
+    const im: Swim[] = [{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }];
+    expect(chartSeries(im, 'raw')).toEqual([
+      { id: '100', label: '100 yd', values: [89.1], color: 'coral', dashed: false },
+    ]);
+  });
+});
