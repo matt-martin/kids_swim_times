@@ -1,4 +1,32 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Locator } from '@playwright/test';
+
+async function findRenderedSeriesPoint(chart: Locator): Promise<{ x: number; y: number } | null> {
+  return chart.evaluate((canvas) => {
+    const context = canvas.getContext('2d');
+    if (!context) return null;
+    const { width, height } = canvas;
+    const pixels = context.getImageData(0, 0, width, height).data;
+    let best = { score: 0, x: 0, y: 0 };
+    const isSeriesPixel = (offset: number) => (
+      (pixels[offset] === 239 && pixels[offset + 1] === 118 && pixels[offset + 2] === 93)
+      || (pixels[offset] === 39 && pixels[offset + 1] === 108 && pixels[offset + 2] === 131)
+    );
+    for (let y = 12; y < height - 12; y += 4) {
+      for (let x = 12; x < width - 12; x += 4) {
+        let score = 0;
+        for (let dy = -8; dy <= 8; dy += 2) {
+          for (let dx = -8; dx <= 8; dx += 2) {
+            if (isSeriesPixel(((y + dy) * width + x + dx) * 4)) score += 1;
+          }
+        }
+        if (score > best.score) best = { score, x, y };
+      }
+    }
+    return best.score > 10
+      ? { x: best.x * canvas.clientWidth / width, y: best.y * canvas.clientHeight / height }
+      : null;
+  });
+}
 
 test('event charts stay inside the viewport on every browser profile', async ({ page }, testInfo) => {
   await page.goto('/');
@@ -58,13 +86,37 @@ test('touch profiles use simple tap interactions instead of freeze controls', as
   await page.goto('/');
   const chart = page.locator('[data-chart]').first();
   await expect(chart).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+  await page.waitForTimeout(300);
   await expect(page.locator('[data-action="unfreeze"]')).toHaveCount(0);
 
   const beforeTap = await chart.screenshot();
+  const selectionPoint = await findRenderedSeriesPoint(chart);
+  expect(selectionPoint).not.toBeNull();
+  await chart.tap({ position: selectionPoint! });
+  await expect.poll(async () => Buffer.compare(beforeTap, await chart.screenshot())).not.toBe(0);
+});
+
+test('tapping a blank chart area clears the touch selection', async ({ page }, testInfo) => {
+  test.skip(!['android-chrome', 'iphone-safari'].includes(testInfo.project.name), 'touch behavior only');
+
+  await page.goto('/');
+  const chart = page.locator('[data-chart]').first();
+  await expect(chart).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+  await page.waitForTimeout(300);
   const box = await chart.boundingBox();
   expect(box).not.toBeNull();
-  await chart.tap({ position: { x: Math.round(box!.width / 2), y: Math.round(box!.height / 2) } });
-  await expect.poll(async () => Buffer.compare(beforeTap, await chart.screenshot())).not.toBe(0);
+
+  const selectionPoint = await findRenderedSeriesPoint(chart);
+  expect(selectionPoint).not.toBeNull();
+  await chart.tap({ position: selectionPoint! });
+  await expect(chart).toHaveAttribute('data-touch-selection', 'selected');
+  const selected = await chart.screenshot();
+
+  await chart.tap({ position: { x: Math.round(box!.width / 2), y: 20 } });
+  await expect(chart).toHaveAttribute('data-touch-selection', 'cleared');
+  await expect.poll(async () => Buffer.compare(selected, await chart.screenshot())).not.toBe(0);
 });
 
 test('desktop profiles keep the freeze interaction', async ({ page }, testInfo) => {

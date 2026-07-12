@@ -25,6 +25,7 @@ let selectedId = '';
 let viewMode: ChartMode = DEFAULT_CHART_MODE;
 let charts: Chart[] = [];
 let sharedHoverState: HoverState = { index: null, locked: false };
+let ignoreSyntheticMouseUntil = 0;
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const axisDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' });
@@ -64,8 +65,31 @@ const summerBackgroundPlugin: Plugin<'line'> = {
 const sharedHoverPlugin: Plugin<'line'> = {
   id: 'sharedHover',
   afterEvent(chart, args) {
-    if (isTouchPrimaryInput) return;
     const { event } = args;
+    if (isTouchPrimaryInput) {
+      const eventType = event.type as string;
+      if (eventType === 'touchstart') {
+        ignoreSyntheticMouseUntil = performance.now() + 500;
+        chart.options.plugins!.tooltip!.enabled = true;
+      }
+      if (eventType === 'mousedown' && performance.now() < ignoreSyntheticMouseUntil) return;
+      if ((eventType === 'touchstart' || eventType === 'mousedown') && event.x != null && event.y != null) {
+        const activeElements = chart.getElementsAtEventForMode(event as unknown as Event, 'nearest', { intersect: true }, false);
+        if (!activeElements.length) {
+          requestAnimationFrame(() => {
+            chart.options.plugins!.tooltip!.enabled = false;
+            chart.setActiveElements([]);
+            chart.tooltip?.setActiveElements([], { x: event.x!, y: event.y! });
+            chart.canvas.dataset.touchSelection = 'cleared';
+            chart.update('none');
+          });
+        } else {
+          chart.options.plugins!.tooltip!.enabled = true;
+          chart.canvas.dataset.touchSelection = 'selected';
+        }
+      }
+      return;
+    }
     if (event.type === 'mousemove' && args.inChartArea) {
       const xPixel = event.x;
       const value = xPixel == null ? null : chart.scales.x.getValueForPixel(xPixel);
@@ -273,7 +297,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      events: isTouchPrimaryInput ? ['touchstart'] : ['mousemove', 'mouseout', 'click'],
+      events: isTouchPrimaryInput ? ['touchstart', 'mousedown'] : ['mousemove', 'mouseout', 'click'],
       interaction: { intersect: false, mode: 'index' },
       plugins: {
         legend: { display: false },
