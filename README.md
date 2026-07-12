@@ -27,6 +27,14 @@ npm run dev
 
 Then open the local URL printed by Vite. The site is static after the JSON file is generated, so `npm run build` produces a deployable `dist/` directory.
 
+## GitHub Pages
+
+The repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml`. After pushing it to `main`, open **Settings → Pages** on GitHub and set **Source** to **GitHub Actions**. Future pushes to `main` will build and deploy the site at:
+
+```text
+https://matt-martin.github.io/kids_swim_times/
+```
+
 ## Checks
 
 ```bash

@@ -13,6 +13,7 @@ import {
   type Swimmer,
 } from './lib/swim';
 import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetricItems, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails, type ChartMode, type HoverState } from './lib/chartData';
+import { assetPath } from './lib/paths';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -157,7 +158,7 @@ function render() {
   app.innerHTML = `
     <div class="site-shell">
       <header class="topbar shell">
-        <a class="wordmark" href="/" aria-label="Swim Story home"><span class="wordmark-mark">≈</span><span>swim story</span></a>
+        <a class="wordmark" href="${assetPath(import.meta.env.BASE_URL, '/') }" aria-label="Swim Story home"><span class="wordmark-mark">≈</span><span>swim story</span></a>
         <div class="topbar-note"><span class="pulse-dot"></span>Summer by summer</div>
       </header>
       <main class="shell">
@@ -315,7 +316,7 @@ function pointBelongsToSeries(seriesId: string, point: SwimPoint | undefined): b
 async function loadData() {
   renderLoading();
   try {
-    const response = await fetch('/data/swim-times.json');
+    const response = await fetch(assetPath(import.meta.env.BASE_URL, 'data/swim-times.json'));
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = await response.json() as AppData;
     selectedId = data.swimmers[0]?.id ?? '';
