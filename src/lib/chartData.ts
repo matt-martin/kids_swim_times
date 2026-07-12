@@ -32,6 +32,10 @@ export function nearestTimelineIndex(value: number, labelCount: number): number 
   return Math.max(0, Math.min(labelCount - 1, Math.round(value)));
 }
 
+export function chartLineOptions() {
+  return { spanGaps: true };
+}
+
 export function seasonBands(labels: string[]): SeasonBand[] {
   if (!labels.length) return [];
   const bands: SeasonBand[] = [];

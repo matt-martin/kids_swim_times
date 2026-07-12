@@ -11,7 +11,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { alignSeriesToTimeline, chartAxis, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -222,7 +222,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
     borderWidth: 2.5,
     borderDash: item.dashed ? [7, 6] : [],
     tension: 0.22,
-    spanGaps: false,
+    ...chartLineOptions(),
   }));
   return new Chart(canvas, {
     type: 'line',

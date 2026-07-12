@@ -8,6 +8,8 @@ Charts shade alternating summers to make the seasonal gaps easy to scan. Hoverin
 
 All event charts for a selected kid share that kid’s full date range. Hovering any chart also draws a synchronized vertical guide across the other event charts.
 
+Event lines stay connected across meets where that event was not swum; the line bridges only the missing date slot and does not invent a data point.
+
 ## Run it
 
 ```bash

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alignSeriesToTimeline, chartAxis, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails } from './chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails } from './chartData';
 import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,10 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('connects a series across dates where its event has no result', () => {
+    expect(chartLineOptions()).toEqual({ spanGaps: true });
+  });
+
   it('builds one shared chronological timeline for a swimmer', () => {
     expect(timelineLabels([
       swims[1],
