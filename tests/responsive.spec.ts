@@ -101,14 +101,19 @@ test('touch profiles use simple tap interactions instead of freeze controls', as
   await page.waitForTimeout(300);
   await expect(page.locator('[data-action="unfreeze"]')).toHaveCount(0);
 
-  const beforeTap = await chart.screenshot();
   const selectionPoint = await findRenderedSeriesPoint(chart);
   expect(selectionPoint).not.toBeNull();
   await chart.tap({ position: selectionPoint! });
-  await expect.poll(async () => Buffer.compare(beforeTap, await chart.screenshot())).not.toBe(0);
+  const pointPanel = page.locator('[data-touch-panel]').first();
+  await expect(pointPanel).toBeVisible();
+  await expect(pointPanel.locator('[data-touch-date]')).not.toBeEmpty();
+  await expect(pointPanel.locator('[data-touch-value]')).toContainText('yd');
+  await expect(pointPanel.locator('[data-action="close-point"]')).toBeVisible();
+  await expect(pointPanel.locator('[data-action="previous-point"]')).toBeVisible();
+  await expect(pointPanel.locator('[data-action="next-point"]')).toBeVisible();
 });
 
-test('tapping a blank chart area clears the touch selection', async ({ page }, testInfo) => {
+test('touch point controls close and move through nearby results', async ({ page }, testInfo) => {
   test.skip(!['android-chrome', 'iphone-safari'].includes(testInfo.project.name), 'touch behavior only');
 
   await page.goto('/');
@@ -122,12 +127,22 @@ test('tapping a blank chart area clears the touch selection', async ({ page }, t
   const selectionPoint = await findRenderedSeriesPoint(chart);
   expect(selectionPoint).not.toBeNull();
   await chart.tap({ position: selectionPoint! });
-  await expect(chart).toHaveAttribute('data-touch-selection', 'selected');
-  const selected = await chart.screenshot();
+  const pointPanel = page.locator('[data-touch-panel]').first();
+  await expect(pointPanel).toBeVisible();
 
   await chart.tap({ position: { x: Math.round(box!.width / 2), y: 20 } });
-  await expect(chart).toHaveAttribute('data-touch-selection', 'cleared');
-  await expect.poll(async () => Buffer.compare(selected, await chart.screenshot())).not.toBe(0);
+  await expect(pointPanel).toBeVisible();
+
+  const previous = pointPanel.locator('[data-action="previous-point"]');
+  const next = pointPanel.locator('[data-action="next-point"]');
+  if (await previous.isEnabled()) await previous.click();
+  else await next.click();
+  await expect(pointPanel.locator('[data-touch-position]')).toContainText('/');
+  await expect(previous).toBeVisible();
+  await expect(next).toBeVisible();
+
+  await pointPanel.locator('[data-action="close-point"]').click();
+  await expect(pointPanel).toBeHidden();
 });
 
 test('desktop profiles keep the freeze interaction', async ({ page }, testInfo) => {

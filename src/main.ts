@@ -71,23 +71,10 @@ const sharedHoverPlugin: Plugin<'line'> = {
       const eventType = event.type as string;
       if (eventType === 'touchstart') {
         ignoreSyntheticMouseUntil = performance.now() + 500;
-        chart.options.plugins!.tooltip!.enabled = true;
       }
       if (eventType === 'mousedown' && performance.now() < ignoreSyntheticMouseUntil) return;
       if ((eventType === 'touchstart' || eventType === 'mousedown') && event.x != null && event.y != null) {
-        const activeElements = chart.getElementsAtEventForMode(event as unknown as Event, 'nearest', { intersect: true }, false);
-        if (!activeElements.length) {
-          requestAnimationFrame(() => {
-            chart.options.plugins!.tooltip!.enabled = false;
-            chart.setActiveElements([]);
-            chart.tooltip?.setActiveElements([], { x: event.x!, y: event.y! });
-            chart.canvas.dataset.touchSelection = 'cleared';
-            chart.update('none');
-          });
-        } else {
-          chart.options.plugins!.tooltip!.enabled = true;
-          chart.canvas.dataset.touchSelection = 'selected';
-        }
+        touchPointControllers.get(chart)?.select(event.x, event.y);
       }
       return;
     }
@@ -260,12 +247,29 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
     ? `<div class="standard-legend">${standards.map((level) => `<span><i class="standard-star ${level}">★</i>${level} standard</span>`).join('')}</div>`
     : '';
   const unfreezeMarkup = isTouchPrimaryInput ? '' : '<button class="unfreeze-button" data-action="unfreeze" aria-label="Unfreeze date guide" aria-hidden="true">×</button>';
+  const touchPointMarkup = isTouchPrimaryInput ? `<div class="touch-point-panel" data-touch-panel hidden role="region" aria-label="Selected ${eventLabel(event)} result" aria-live="polite">
+    <button class="touch-point-close" data-action="close-point" aria-label="Close selected result">×</button>
+    <p class="touch-point-date" data-touch-date></p>
+    <strong class="touch-point-value" data-touch-value></strong>
+    <span class="touch-point-detail" data-touch-detail></span>
+    <div class="touch-point-nav">
+      <button class="touch-point-nav-button" data-action="previous-point" aria-label="Show earlier result">← Earlier</button>
+      <span class="touch-point-position" data-touch-position></span>
+      <button class="touch-point-nav-button" data-action="next-point" aria-label="Show later result">Later →</button>
+    </div>
+  </div>` : '';
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${eventShortLabel(event)}</span></div>
     ${hasData ? `<div class="event-metrics">${metricMarkup}</div>` : ''}
-    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas>${unfreezeMarkup}</div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
+    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas>${unfreezeMarkup}</div>${touchPointMarkup}` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
 }
+
+type TouchPointController = {
+  select: (x: number, y: number) => void;
+};
+
+const touchPointControllers = new WeakMap<Chart, TouchPointController>();
 
 function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode, sharedLabels: string[]): Chart {
   const points = normalizePoints(swims);
@@ -289,7 +293,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
     tension: 0.22,
     ...chartLineOptions(),
   }));
-  return new Chart(canvas, {
+  const chart = new Chart(canvas, {
     type: 'line',
     data: {
       labels,
@@ -304,6 +308,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
         legend: { display: false },
         // Chart.js invokes this before drawing the grid and data, keeping the summer bands behind both.
         tooltip: {
+          enabled: !isTouchPrimaryInput,
           padding: 12,
           backgroundColor: '#092f43',
           titleColor: '#f5f2eb',
@@ -332,6 +337,112 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
       },
     },
     plugins: [summerBackgroundPlugin, sharedHoverPlugin],
+  });
+
+  if (isTouchPrimaryInput) setupTouchPointPanel(chart, points, labels, series, mode);
+  return chart;
+}
+
+function setupTouchPointPanel(
+  chart: Chart,
+  points: SwimPoint[],
+  labels: string[],
+  series: ReturnType<typeof chartSeries>,
+  mode: ChartMode,
+) {
+  const panel = chart.canvas.closest<HTMLElement>('.chart-card')?.querySelector<HTMLElement>('[data-touch-panel]');
+  if (!panel) return;
+
+  let selectedIndex: number | null = null;
+
+  const updatePanel = (datasetIndex: number | null = null, dataIndex: number | null = null) => {
+    if (selectedIndex === null) {
+      panel.hidden = true;
+      chart.setActiveElements([]);
+      chart.canvas.dataset.touchSelection = 'closed';
+      chart.update('none');
+      return;
+    }
+
+    const point = points[selectedIndex];
+    if (!point) return;
+    const date = panel.querySelector<HTMLElement>('[data-touch-date]');
+    const value = panel.querySelector<HTMLElement>('[data-touch-value]');
+    const detail = panel.querySelector<HTMLElement>('[data-touch-detail]');
+    const position = panel.querySelector<HTMLElement>('[data-touch-position]');
+    const previous = panel.querySelector<HTMLButtonElement>('[data-action="previous-point"]');
+    const next = panel.querySelector<HTMLButtonElement>('[data-action="next-point"]');
+    if (!date || !value || !detail || !position || !previous || !next) return;
+
+    date.textContent = formatDate(point.date);
+    value.textContent = mode === 'speed'
+      ? `${point.distance} yd · ${speedInMilesPerHour(point.distance, point.seconds).toFixed(2)} mph`
+      : `${point.distance} yd · ${formatTime(point.seconds)}`;
+    detail.textContent = `${tooltipDetails(point)}${point.meet ? ` · ${point.meet}` : ''}`;
+    position.textContent = `${selectedIndex + 1} / ${points.length}`;
+    previous.disabled = selectedIndex === 0;
+    next.disabled = selectedIndex === points.length - 1;
+    panel.hidden = false;
+    chart.canvas.dataset.touchSelection = 'selected';
+
+    if (datasetIndex !== null && dataIndex !== null) {
+      chart.setActiveElements([{ datasetIndex, index: dataIndex }]);
+    } else {
+      const selectedDateIndex = labels.indexOf(point.date);
+      const selectedSeriesIndex = series.findIndex((item) => pointBelongsToSeries(item.id, point));
+      chart.setActiveElements(selectedDateIndex === -1 || selectedSeriesIndex === -1
+        ? []
+        : [{ datasetIndex: selectedSeriesIndex, index: selectedDateIndex }]);
+    }
+    chart.update('none');
+  };
+
+  const selectPoint = (index: number, datasetIndex: number | null = null, dataIndex: number | null = null) => {
+    selectedIndex = Math.max(0, Math.min(points.length - 1, index));
+    updatePanel(datasetIndex, dataIndex);
+  };
+
+  touchPointControllers.set(chart, {
+    select: (x, y) => {
+      let nearest: { pointIndex: number; datasetIndex: number; dataIndex: number; distance: number } | null = null;
+      chart.data.datasets.forEach((_dataset, datasetIndex) => {
+        const meta = chart.getDatasetMeta(datasetIndex);
+        const seriesItem = series[datasetIndex];
+        if (!seriesItem) return;
+        meta.data.forEach((element, dataIndex) => {
+          const props = element.getProps(['x', 'y'], true) as { x?: number; y?: number };
+          if (props.x == null || props.y == null || (element as unknown as { skip?: boolean }).skip) return;
+          const point = points.find((candidate) => candidate.date === labels[dataIndex] && pointBelongsToSeries(seriesItem.id, candidate));
+          if (!point) return;
+          const distance = (props.x - x) ** 2 + (props.y - y) ** 2;
+          if (!nearest || distance < nearest.distance) {
+            nearest = { pointIndex: points.indexOf(point), datasetIndex, dataIndex, distance };
+          }
+        });
+      });
+
+      const nearestSelection = nearest as { pointIndex: number; datasetIndex: number; dataIndex: number; distance: number } | null;
+      if (nearestSelection) {
+        selectPoint(nearestSelection.pointIndex, nearestSelection.datasetIndex, nearestSelection.dataIndex);
+        return;
+      }
+
+      const value = chart.scales.x.getValueForPixel(x);
+      const dateIndex = value == null ? null : nearestTimelineIndex(value, labels.length);
+      const pointIndex = dateIndex === null ? null : points.findIndex((point) => point.date === labels[dateIndex]);
+      if (pointIndex !== null && pointIndex >= 0) selectPoint(pointIndex);
+    },
+  });
+
+  panel.querySelector<HTMLButtonElement>('[data-action="close-point"]')?.addEventListener('click', () => {
+    selectedIndex = null;
+    updatePanel();
+  });
+  panel.querySelector<HTMLButtonElement>('[data-action="previous-point"]')?.addEventListener('click', () => {
+    if (selectedIndex !== null && selectedIndex > 0) selectPoint(selectedIndex - 1);
+  });
+  panel.querySelector<HTMLButtonElement>('[data-action="next-point"]')?.addEventListener('click', () => {
+    if (selectedIndex !== null && selectedIndex < points.length - 1) selectPoint(selectedIndex + 1);
   });
 }
 

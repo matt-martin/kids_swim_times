@@ -50,6 +50,17 @@ h3 { font-size: 1.8rem; margin-bottom: 0; }
 .legend span { display: flex; align-items: center; gap: 6px; }.legend-line { display: inline-block; width: 20px; border-top: 2px solid var(--coral); }.legend-line.coral, .legend-line.coral.dashed { border-color: var(--coral); }.legend-line.blue { border-color: var(--blue); }.legend-line.dashed { border-style: dashed; }
 .standard-legend { display: flex; gap: 12px; margin-top: 10px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .58rem; }.standard-legend span { display: flex; align-items: center; gap: 4px; }.standard-star { font-size: .8rem; line-height: 1; }.standard-star.bronze { color: #b8794a; }.standard-star.silver { color: #93a4ad; }.standard-star.gold { color: #d8a72b; }
 .chart-wrap { position: relative; height: 260px; margin: 12px -8px 0 -12px; }
+.touch-point-panel { position: relative; margin: 18px -8px 0 -12px; padding: 15px 48px 13px 15px; color: var(--ink); background: rgba(232, 238, 235, .72); border: 1px solid var(--line); border-radius: 4px; }
+.touch-point-close { position: absolute; top: 6px; right: 6px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; color: var(--muted); background: transparent; border: 0; border-radius: 50%; font-size: 1.35rem; line-height: 1; }
+.touch-point-close:hover, .touch-point-close:focus-visible { color: var(--ink); background: rgba(255, 253, 249, .8); }
+.touch-point-date { margin: 0 0 4px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .61rem; text-transform: uppercase; letter-spacing: .06em; }
+.touch-point-value { display: block; font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 500; letter-spacing: -.03em; }
+.touch-point-detail { display: block; margin-top: 4px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .59rem; }
+.touch-point-nav { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 13px -33px 0 0; padding-top: 10px; border-top: 1px solid rgba(9, 47, 67, .1); }
+.touch-point-nav-button { min-height: 40px; padding: 6px 8px; color: var(--blue); background: transparent; border: 0; border-radius: 4px; font-size: .68rem; font-weight: 800; }
+.touch-point-nav-button:hover:not(:disabled), .touch-point-nav-button:focus-visible:not(:disabled) { background: rgba(255, 253, 249, .8); }
+.touch-point-nav-button:disabled { color: #aab9b9; cursor: default; }
+.touch-point-position { color: var(--muted); font-family: 'DM Mono', monospace; font-size: .59rem; }
 .empty-card { min-height: 410px; border: 1px dashed #b8c7c3; background: transparent !important; box-shadow: none; }
 .empty-content { min-height: 295px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 30px; color: var(--muted); }.empty-icon { display: grid; place-items: center; width: 45px; height: 45px; margin-bottom: 16px; border-radius: 50%; color: var(--coral); background: rgba(239, 118, 93, .1); }.empty-content p { max-width: 250px; margin: 0; font-size: .8rem; line-height: 1.6; }
 .source-note { margin: 25px 0 55px; color: var(--muted); font-family: 'DM Mono', monospace; font-size: .62rem; line-height: 1.6; }.source-note a { color: var(--blue); }
