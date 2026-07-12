@@ -43,6 +43,7 @@ export function eventMetrics(swims: Swim[]) {
     bestSpeed: points.length ? Math.max(...points.map((point) => point.distance / point.seconds)) : null,
     best25: minimum(points.filter((point) => point.distance === 25).map((point) => point.seconds)),
     best50: minimum(points.filter((point) => point.distance === 50).map((point) => point.seconds)),
+    best100: minimum(points.filter((point) => point.distance === 100).map((point) => point.seconds)),
     bestComparable: minimum(points.map((point) => point.comparableSeconds)),
   };
 }

@@ -3,6 +3,7 @@ import type { Plugin } from 'chart.js';
 import {
   EVENT_KEYS,
   eventLabel,
+  eventShortLabel,
   formatTime,
   normalizePoints,
   type EventKey,
@@ -194,8 +195,14 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
   const series = chartSeries(swims, mode);
   const metrics = eventMetrics(swims);
   const metricItems: Array<[string, number | null]> = mode === 'speed'
-    ? [['Best yd/sec', metrics.bestSpeed]]
-    : [['Best 25', metrics.best25], ['Best 50', metrics.best50], ['Best comparable', metrics.bestComparable]];
+    ? [['Best yd/sec', metrics.bestSpeed], ...(metrics.best100 !== null ? [['Best 100', metrics.best100] as [string, number]] : [])]
+    : [
+      ['Best 25', metrics.best25],
+      ['Best 50', metrics.best50],
+      ...(metrics.best100 !== null && metrics.best25 === null && metrics.best50 === null
+        ? [['Best 100', metrics.best100] as [string, number]]
+        : [['Best comparable', metrics.bestComparable] as [string, number | null]]),
+    ];
   const metricMarkup = metricItems
     .filter(([, value]) => value !== null)
     .map(([label, value]) => `<div class="event-metric"><strong>${mode === 'speed' ? value!.toFixed(2) : formatTime(value!)}</strong><span>${label}</span></div>`)
@@ -205,7 +212,7 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
     ? `<div class="standard-legend">${standards.map((level) => `<span><i class="standard-star ${level}">★</i>${level} standard</span>`).join('')}</div>`
     : '';
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
-    <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${event === 'individual-medley' ? 'IM' : event.slice(0, 2).toUpperCase()}</span></div>
+    <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${eventShortLabel(event)}</span></div>
     ${hasData ? `<div class="event-metrics">${metricMarkup}</div>` : ''}
     ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;

@@ -9,8 +9,8 @@ const swims: Swim[] = [
 
 describe('chart series', () => {
   it('calculates best speed and best raw/comparable times per event', () => {
-    expect(eventMetrics(swims)).toEqual({ bestSpeed: 1, best25: 30, best50: 50, bestComparable: 25 });
-    expect(eventMetrics([{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }])).toEqual({ bestSpeed: 100 / 89.1, best25: null, best50: null, bestComparable: 89.1 });
+    expect(eventMetrics(swims)).toEqual({ bestSpeed: 1, best25: 30, best50: 50, best100: null, bestComparable: 25 });
+    expect(eventMetrics([{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }])).toEqual({ bestSpeed: 100 / 89.1, best25: null, best50: null, best100: 89.1, bestComparable: 89.1 });
   });
 
   it('connects a series across dates where its event has no result', () => {

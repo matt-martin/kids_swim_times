@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventFromLabel, formatTime, normalizePoints, parseTimeToSeconds, standardFromCell } from './swim';
+import { eventFromLabel, eventShortLabel, formatTime, normalizePoints, parseTimeToSeconds, standardFromCell } from './swim';
 
 describe('swim time helpers', () => {
   it.each([
@@ -19,6 +19,11 @@ describe('swim time helpers', () => {
   it('maps the site labels to the five dashboard events', () => {
     expect(eventFromLabel(' 50 INDIVIDUAL MEDLEY ')).toEqual({ event: 'individual-medley', distance: 50 });
     expect(eventFromLabel('100 INDIVIDUAL MEDLEY')).toEqual({ event: 'individual-medley', distance: 100 });
+  });
+
+  it('uses the familiar event badge abbreviations', () => {
+    expect(eventShortLabel('backstroke')).toBe('BK');
+    expect(eventShortLabel('butterfly')).toBe('FLY');
   });
 
   it('halves 50-yard swims for the comparable dashed series', () => {

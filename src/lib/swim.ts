@@ -37,6 +37,18 @@ const EVENT_LABELS: Record<EventKey, string> = {
   'individual-medley': 'Individual medley',
 };
 
+const EVENT_SHORT_LABELS: Record<EventKey, string> = {
+  freestyle: 'FR',
+  backstroke: 'BK',
+  breaststroke: 'BR',
+  butterfly: 'FLY',
+  'individual-medley': 'IM',
+};
+
+export function eventShortLabel(event: EventKey): string {
+  return EVENT_SHORT_LABELS[event];
+}
+
 const STANDARD_COLORS: Record<StandardLevel, string> = {
   bronze: '#b8794a',
   silver: '#93a4ad',

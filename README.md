@@ -12,6 +12,8 @@ Event lines stay connected across meets where that event was not swum; the line 
 
 Each event card also summarizes its best speed or best available 25-yard, 50-yard, and comparable times.
 
+Individual medley cards also report their best 100-yard time. Event badges use FR, BK, BR, FLY, and IM.
+
 ## Run it
 
 ```bash
