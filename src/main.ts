@@ -11,7 +11,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { chartAxis, chartSeries, seasonBands, tooltipDetails, type ChartMode } from './lib/chartData';
+import { alignSeriesToTimeline, chartAxis, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -21,6 +21,7 @@ let data: AppData | null = null;
 let selectedId = '';
 let viewMode: ChartMode = 'speed';
 let charts: Chart[] = [];
+let sharedHoverIndex: number | null = null;
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 const axisDateFormatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' });
@@ -57,6 +58,41 @@ const summerBackgroundPlugin: Plugin<'line'> = {
   },
 };
 
+const sharedHoverPlugin: Plugin<'line'> = {
+  id: 'sharedHover',
+  afterEvent(chart, args) {
+    const { event } = args;
+    if (event.type === 'mousemove' && args.inChartArea) {
+      const xPixel = event.x;
+      const value = xPixel == null ? null : chart.scales.x.getValueForPixel(xPixel);
+      const index = value == null ? null : nearestTimelineIndex(value, chart.data.labels?.length ?? 0);
+      if (index !== sharedHoverIndex) {
+        sharedHoverIndex = index;
+        charts.forEach((item) => item.draw());
+      }
+    } else if (event.type === 'mouseout' && sharedHoverIndex !== null) {
+      sharedHoverIndex = null;
+      charts.forEach((item) => item.draw());
+    }
+  },
+  afterDraw(chart) {
+    if (sharedHoverIndex === null) return;
+    const { chartArea, ctx, scales } = chart;
+    const x = scales.x;
+    if (!chartArea || !x) return;
+    const pixel = x.getPixelForValue(sharedHoverIndex);
+    ctx.save();
+    ctx.strokeStyle = 'rgba(9, 47, 67, 0.45)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.moveTo(pixel, chartArea.top);
+    ctx.lineTo(pixel, chartArea.bottom);
+    ctx.stroke();
+    ctx.restore();
+  },
+};
+
 function renderLoading() {
   app.innerHTML = '<main class="shell loading"><div class="loader" aria-label="Loading swim times"></div><p>Pulling the swim story together…</p></main>';
 }
@@ -80,11 +116,13 @@ function render() {
   if (!data) return;
   charts.forEach((chart) => chart.destroy());
   charts = [];
+  sharedHoverIndex = null;
   const swimmer = getSelected();
   selectedId = swimmer.id;
   const points = allPoints(swimmer);
   const firstDate = points[0]?.date;
   const latestDate = points.at(-1)?.date;
+  const sharedLabels = timelineLabels(points);
   const bestComparable = points.length ? Math.min(...points.map((point) => point.comparableSeconds)) : null;
   const bestSpeed = points.length ? Math.max(...points.map((point) => point.distance / point.seconds)) : null;
   const seasonCount = new Set(points.map((point) => point.date.slice(0, 4))).size;
@@ -147,7 +185,7 @@ function render() {
   });
   EVENT_KEYS.forEach((event) => {
     const swims = swimmer.events[event] ?? [];
-    if (swims.length) charts.push(createChart(event, swims, viewMode));
+    if (swims.length) charts.push(createChart(event, swims, viewMode, sharedLabels));
   });
 }
 
@@ -164,22 +202,23 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
   </article>`;
 }
 
-function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode): Chart {
+function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode, sharedLabels: string[]): Chart {
   const points = normalizePoints(swims);
   const axis = chartAxis(mode);
-  const series = chartSeries(swims, mode);
+  const series = alignSeriesToTimeline(chartSeries(swims, mode), points.map((point) => point.date), sharedLabels);
   const canvas = document.querySelector<HTMLCanvasElement>(`[data-chart="${event}"]`)!;
-  const labels = points.map((point) => point.date);
+  const timelinePoints = sharedLabels.map((date) => points.find((point) => point.date === date));
+  const labels = sharedLabels;
   const datasets = series.map((item) => ({
     label: item.label,
     data: item.values,
     borderColor: item.color === 'coral' ? '#ef765d' : '#276c83',
     backgroundColor: item.color === 'coral' ? '#ef765d' : '#276c83',
-    pointStyle: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? 'star' : 'circle'),
-    pointBackgroundColor: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? standardColor(point.standard.level) : item.color === 'coral' ? '#ef765d' : '#276c83'),
-    pointBorderColor: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? standardColor(point.standard.level) : item.color === 'coral' ? '#ef765d' : '#276c83'),
-    pointRadius: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? 6 : 3.5),
-    pointHoverRadius: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? 8 : 6),
+    pointStyle: timelinePoints.map((point) => point && pointBelongsToSeries(item.id, point) && point.standard ? 'star' : 'circle'),
+    pointBackgroundColor: timelinePoints.map((point) => point && pointBelongsToSeries(item.id, point) && point.standard ? standardColor(point.standard.level) : item.color === 'coral' ? '#ef765d' : '#276c83'),
+    pointBorderColor: timelinePoints.map((point) => point && pointBelongsToSeries(item.id, point) && point.standard ? standardColor(point.standard.level) : item.color === 'coral' ? '#ef765d' : '#276c83'),
+    pointRadius: timelinePoints.map((point) => point && pointBelongsToSeries(item.id, point) && point.standard ? 6 : 3.5),
+    pointHoverRadius: timelinePoints.map((point) => point && pointBelongsToSeries(item.id, point) && point.standard ? 8 : 6),
     borderWidth: 2.5,
     borderDash: item.dashed ? [7, 6] : [],
     tension: 0.22,
@@ -206,7 +245,7 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           callbacks: {
             title: (items) => formatDate(String(items[0].label)),
             label: (item) => `${item.dataset.label}: ${mode === 'speed' ? `${Number(item.raw).toFixed(2)} yd/s` : `${formatTime(Number(item.raw))} sec`}`,
-            afterLabel: (item) => tooltipDetails(points[item.dataIndex]),
+            afterLabel: (item) => timelinePoints[item.dataIndex] ? tooltipDetails(timelinePoints[item.dataIndex]!) : '',
           },
         },
       },
@@ -226,11 +265,12 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
         },
       },
     },
-    plugins: [summerBackgroundPlugin],
+    plugins: [summerBackgroundPlugin, sharedHoverPlugin],
   });
 }
 
-function pointBelongsToSeries(seriesId: string, point: SwimPoint): boolean {
+function pointBelongsToSeries(seriesId: string, point: SwimPoint | undefined): boolean {
+  if (!point) return false;
   if (seriesId === 'speed') return true;
   if (seriesId === '50' || seriesId === '50-per-25') return point.distance === 50;
   return point.distance === Number(seriesId);

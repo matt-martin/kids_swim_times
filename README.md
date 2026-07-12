@@ -6,6 +6,8 @@ The dashboard opens in **Speed** view, using yards per second so distances compa
 
 Charts shade alternating summers to make the seasonal gaps easy to scan. Hovering a point shows its recorded age and time-standard label when one exists.
 
+All event charts for a selected kid share that kid’s full date range. Hovering any chart also draws a synchronized vertical guide across the other event charts.
+
 ## Run it
 
 ```bash

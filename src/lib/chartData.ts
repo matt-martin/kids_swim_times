@@ -13,6 +13,25 @@ export type ChartSeries = {
 
 export type SeasonBand = { year: string; start: number; end: number; alternate: boolean };
 
+export function timelineLabels(swims: Swim[]): string[] {
+  return [...new Set(swims.map((swim) => swim.date))].sort();
+}
+
+export function alignSeriesToTimeline(series: ChartSeries[], eventDates: string[], labels: string[]): ChartSeries[] {
+  return series.map((item) => ({
+    ...item,
+    values: labels.map((label) => {
+      const eventIndex = eventDates.indexOf(label);
+      return eventIndex === -1 ? null : item.values[eventIndex];
+    }),
+  }));
+}
+
+export function nearestTimelineIndex(value: number, labelCount: number): number | null {
+  if (!labelCount || !Number.isFinite(value)) return null;
+  return Math.max(0, Math.min(labelCount - 1, Math.round(value)));
+}
+
 export function seasonBands(labels: string[]): SeasonBand[] {
   if (!labels.length) return [];
   const bands: SeasonBand[] = [];

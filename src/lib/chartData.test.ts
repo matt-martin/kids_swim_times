@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chartAxis, chartSeries, seasonBands, tooltipDetails } from './chartData';
+import { alignSeriesToTimeline, chartAxis, chartSeries, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails } from './chartData';
 import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,22 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('builds one shared chronological timeline for a swimmer', () => {
+    expect(timelineLabels([
+      swims[1],
+      { ...swims[0], date: '2023-06-01' },
+      swims[0],
+    ])).toEqual(['2023-06-01', '2024-06-01', '2025-06-01']);
+    expect(alignSeriesToTimeline(chartSeries(swims, 'speed'), swims.map((swim) => swim.date), ['2023-06-01', '2024-06-01', '2025-06-01'])[0].values).toEqual([null, 25 / 30, 1]);
+  });
+
+  it('clamps a hovered chart position to the shared timeline', () => {
+    expect(nearestTimelineIndex(2.4, 4)).toBe(2);
+    expect(nearestTimelineIndex(-1, 4)).toBe(0);
+    expect(nearestTimelineIndex(8, 4)).toBe(3);
+    expect(nearestTimelineIndex(2, 0)).toBeNull();
+  });
+
   it('groups contiguous result dates into alternating summer bands', () => {
     expect(seasonBands(['2024-06-01', '2024-07-01', '2025-06-01', '2026-06-01'])).toEqual([
       { year: '2024', start: 0, end: 1, alternate: false },
