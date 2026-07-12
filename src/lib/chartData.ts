@@ -50,7 +50,15 @@ export function chartLineOptions() {
   return { spanGaps: true };
 }
 
-export function eventMetrics(swims: Swim[]) {
+export type EventMetrics = {
+  bestSpeed: number | null;
+  best25: number | null;
+  best50: number | null;
+  best100: number | null;
+  bestComparable: number | null;
+};
+
+export function eventMetrics(swims: Swim[]): EventMetrics {
   const points = normalizePoints(swims);
   const minimum = (values: number[]) => values.length ? Math.min(...values) : null;
   return {
@@ -60,6 +68,22 @@ export function eventMetrics(swims: Swim[]) {
     best100: minimum(points.filter((point) => point.distance === 100).map((point) => point.seconds)),
     bestComparable: minimum(points.map((point) => point.comparableSeconds)),
   };
+}
+
+export function eventMetricItems(metrics: EventMetrics, mode: ChartMode): Array<[string, number]> {
+  if (mode === 'speed') {
+    return [
+      ...(metrics.bestSpeed === null ? [] : [['Best yd/sec', metrics.bestSpeed] as [string, number]]),
+      ...(metrics.best100 === null ? [] : [['Best 100', metrics.best100] as [string, number]]),
+    ];
+  }
+
+  const items: Array<[string, number]> = [];
+  if (metrics.best25 !== null) items.push(['Best 25', metrics.best25]);
+  if (metrics.best50 !== null) items.push(['Best 50', metrics.best50]);
+  if (metrics.best100 !== null && metrics.best25 === null && metrics.best50 === null) items.push(['Best 100', metrics.best100]);
+  if (metrics.best25 !== null && metrics.best50 !== null && metrics.bestComparable !== null) items.push(['Best comparable', metrics.bestComparable]);
+  return items;
 }
 
 export function seasonBands(labels: string[]): SeasonBand[] {

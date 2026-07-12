@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails } from './chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetricItems, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails } from './chartData';
 import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,17 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('only shows comparable time when both 25 and 50 distances exist', () => {
+    const only25 = eventMetrics([swims[0]]);
+    const only50 = eventMetrics([swims[1]]);
+    const mixed = eventMetrics(swims);
+    const im = eventMetrics([{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }]);
+    expect(eventMetricItems(only25, 'raw')).toEqual([['Best 25', 30]]);
+    expect(eventMetricItems(only50, 'raw')).toEqual([['Best 50', 50]]);
+    expect(eventMetricItems(mixed, 'raw')).toEqual([['Best 25', 30], ['Best 50', 50], ['Best comparable', 25]]);
+    expect(eventMetricItems(im, 'raw')).toEqual([['Best 100', 89.1]]);
+  });
+
   it('freezes the shared guide on click until explicitly unfrozen', () => {
     const initial = { index: null, locked: false };
     const hovered = nextHoverState(initial, 'move', 2);

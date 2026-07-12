@@ -12,7 +12,7 @@ Click a hovered date to freeze the guide across the charts; use any chart’s ci
 
 Event lines stay connected across meets where that event was not swum; the line bridges only the missing date slot and does not invent a data point.
 
-Each event card also summarizes its best speed or best available 25-yard, 50-yard, and comparable times.
+Each event card also summarizes its best speed or best available 25-yard, 50-yard, and comparable times. Comparable time is shown only when both 25- and 50-yard distances are present.
 
 Individual medley cards also report their best 100-yard time. Event badges use FR, BK, BR, FLY, and IM.
 

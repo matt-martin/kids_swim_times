@@ -12,7 +12,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails, type ChartMode, type HoverState } from './lib/chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetricItems, eventMetrics, nearestTimelineIndex, nextHoverState, seasonBands, timelineLabels, tooltipDetails, type ChartMode, type HoverState } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -222,15 +222,7 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
   const hasData = swims.length > 0;
   const series = chartSeries(swims, mode);
   const metrics = eventMetrics(swims);
-  const metricItems: Array<[string, number | null]> = mode === 'speed'
-    ? [['Best yd/sec', metrics.bestSpeed], ...(metrics.best100 !== null ? [['Best 100', metrics.best100] as [string, number]] : [])]
-    : [
-      ['Best 25', metrics.best25],
-      ['Best 50', metrics.best50],
-      ...(metrics.best100 !== null && metrics.best25 === null && metrics.best50 === null
-        ? [['Best 100', metrics.best100] as [string, number]]
-        : [['Best comparable', metrics.bestComparable] as [string, number | null]]),
-    ];
+  const metricItems = eventMetricItems(metrics, mode);
   const metricMarkup = metricItems
     .filter(([, value]) => value !== null)
     .map(([label, value]) => `<div class="event-metric"><strong>${mode === 'speed' ? value!.toFixed(2) : formatTime(value!)}</strong><span>${label}</span></div>`)
