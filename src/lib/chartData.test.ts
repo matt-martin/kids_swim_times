@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chartSeries } from './chartData';
+import { chartAxis, chartSeries } from './chartData';
 import type { Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,10 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('uses an ascending raw-time axis with zero at the x-axis', () => {
+    expect(chartAxis('raw')).toEqual({ reverse: false, beginAtZero: true });
+  });
+
   it('turns mixed-distance swims into one comparable yards-per-second series', () => {
     expect(chartSeries(swims, 'speed')).toEqual([{
       id: 'speed',

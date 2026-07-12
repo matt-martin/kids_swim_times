@@ -8,7 +8,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { chartSeries, type ChartMode } from './lib/chartData';
+import { chartAxis, chartSeries, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -136,6 +136,7 @@ function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKe
 
 function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode): Chart {
   const points = normalizePoints(swims);
+  const axis = chartAxis(mode);
   const series = chartSeries(swims, mode);
   const canvas = document.querySelector<HTMLCanvasElement>(`[data-chart="${event}"]`)!;
   const labels = points.map((point) => point.date);
@@ -181,7 +182,8 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
           border: { display: false },
         },
         y: {
-          reverse: mode === 'raw',
+          reverse: axis.reverse,
+          beginAtZero: axis.beginAtZero,
           grid: { color: 'rgba(9, 47, 67, 0.08)' },
           ticks: { color: '#68818b', callback: (value) => mode === 'speed' ? Number(value).toFixed(2) : `${Number(value).toFixed(0)}s` },
           title: { display: true, text: mode === 'speed' ? 'yards / second  ·  faster ↑' : 'seconds  ·  faster ↑', color: '#68818b', font: { size: 11, weight: 'bold' } },

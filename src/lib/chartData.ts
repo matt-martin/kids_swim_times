@@ -11,6 +11,10 @@ export type ChartSeries = {
   dashed: boolean;
 };
 
+export function chartAxis(mode: ChartMode) {
+  return { reverse: false, beginAtZero: mode === 'raw' };
+}
+
 export function chartSeries(swims: Swim[], mode: ChartMode): ChartSeries[] {
   const points = normalizePoints(swims);
 
