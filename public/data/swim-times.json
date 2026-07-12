@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-11T23:55:07.228Z",
+  "fetchedAt": "2026-07-12T00:17:37.768Z",
   "swimmers": [
     {
       "id": "oliver",
@@ -329,7 +329,11 @@
             "sourceTime": "40.92Y",
             "meet": "SLEEPYB_2025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -347,7 +351,11 @@
             "sourceTime": "39.44Y",
             "meet": "OMPA_2025",
             "age": 10,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -419,7 +427,11 @@
             "sourceTime": "35.32Y",
             "meet": "MVP_AT_MEAD_07082026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-07-11",
@@ -547,7 +559,11 @@
             "sourceTime": "52.06Y",
             "meet": "OMPA_2025",
             "age": 10,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -900,7 +916,11 @@
             "sourceTime": "46.49Y",
             "meet": "SLEEPYB_2025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -918,7 +938,11 @@
             "sourceTime": "44.71Y",
             "meet": "OMPA_2025",
             "age": 10,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -1055,7 +1079,11 @@
             "sourceTime": "29.49Y",
             "meet": "OMPA_2021",
             "age": 6,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-05-15",
@@ -1091,7 +1119,11 @@
             "sourceTime": "21.09Y",
             "meet": "CCC_AT_MEAD_06112022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-06-22",
@@ -1109,7 +1141,11 @@
             "sourceTime": "20.05Y",
             "meet": "BOTTOMS_UP_2022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-07-10",
@@ -1118,7 +1154,11 @@
             "sourceTime": "20.37Y",
             "meet": "MEADOW_MINI_2022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-07-13",
@@ -1127,7 +1167,11 @@
             "sourceTime": "21.08Y",
             "meet": "MVP_AT_MEAD_07132022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-07-16",
@@ -1136,7 +1180,11 @@
             "sourceTime": "19.44Y",
             "meet": "MEAD_AT_OCC_07162022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-07-20",
@@ -1145,7 +1193,11 @@
             "sourceTime": "21.18Y",
             "meet": "MEAD_INTRSQD_07202022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-07-30",
@@ -1154,7 +1206,11 @@
             "sourceTime": "20.14Y",
             "meet": "OMPA_2022",
             "age": 7,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-05-13",
@@ -1163,7 +1219,11 @@
             "sourceTime": "19.44Y",
             "meet": "MEAD_TTRIALS_05132023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-03",
@@ -1172,7 +1232,11 @@
             "sourceTime": "21.10M",
             "meet": "MEAD_AT_CCC_06032023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-10",
@@ -1181,7 +1245,11 @@
             "sourceTime": "21.30Y",
             "meet": "MIRA_AT_MEAD_06102023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-14",
@@ -1199,7 +1267,11 @@
             "sourceTime": "21.29Y",
             "meet": "PARK_AT_MEAD_06172023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-21",
@@ -1208,7 +1280,11 @@
             "sourceTime": "21.42Y",
             "meet": "MEAD_AT_MVP_06212023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-01",
@@ -1217,7 +1293,11 @@
             "sourceTime": "21.59Y",
             "meet": "LTST_AT_MEAD_07012023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-09",
@@ -1226,7 +1306,11 @@
             "sourceTime": "18.89Y",
             "meet": "MEADOW_MINI_2023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-12",
@@ -1235,7 +1319,11 @@
             "sourceTime": "18.98Y",
             "meet": "SH_AT_MEAD_07122023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-15",
@@ -1244,7 +1332,11 @@
             "sourceTime": "18.75Y",
             "meet": "MEAD_AT_OCC_07152023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-19",
@@ -1253,7 +1345,11 @@
             "sourceTime": "17.91Y",
             "meet": "MEAD_INTRSQD_07192023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2023-07-29",
@@ -1262,7 +1358,11 @@
             "sourceTime": "17.78Y",
             "meet": "OMPA_2023",
             "age": 8,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2024-05-19",
@@ -1298,7 +1398,11 @@
             "sourceTime": "39.28Y",
             "meet": "MIRA_AT_MEAD_06122024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-06-15",
@@ -1307,7 +1411,11 @@
             "sourceTime": "40.12Y",
             "meet": "SPBR_AT_MEAD_06152024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-06-22",
@@ -1316,7 +1424,11 @@
             "sourceTime": "37.84Y",
             "meet": "MEAD_AT_PARK_06222024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-17",
@@ -1325,7 +1437,11 @@
             "sourceTime": "38.89Y",
             "meet": "MEAD_AT_SH_07172024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-20",
@@ -1334,7 +1450,11 @@
             "sourceTime": "37.38Y",
             "meet": "OCC_AT_MEAD_07202024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-21",
@@ -1343,7 +1463,11 @@
             "sourceTime": "38.90Y",
             "meet": "SLEEPYB_2024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-24",
@@ -1361,7 +1485,11 @@
             "sourceTime": "39.87Y",
             "meet": "OMPA_2024",
             "age": 9,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-04",
@@ -1370,7 +1498,11 @@
             "sourceTime": "37.66Y",
             "meet": "MEAD_OMSC_AT_MVP_06042025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-11",
@@ -1379,7 +1511,11 @@
             "sourceTime": "44.46M",
             "meet": "MEAD_AT_CCC_06112025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-14",
@@ -1388,7 +1524,11 @@
             "sourceTime": "38.59Y",
             "meet": "MVP_OMSC_AT_MEAD_06142025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-18",
@@ -1397,7 +1537,11 @@
             "sourceTime": "38.86Y",
             "meet": "MEAD_AT_MVP_06182025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-21",
@@ -1406,7 +1550,11 @@
             "sourceTime": "38.07Y",
             "meet": "PARK_AT_MEAD_06212025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-16",
@@ -1415,7 +1563,11 @@
             "sourceTime": "35.41Y",
             "meet": "SH_AT_MEAD_07162025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2025-07-19",
@@ -1424,7 +1576,11 @@
             "sourceTime": "37.06Y",
             "meet": "MEAD_AT_OCC_07192025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-08-02",
@@ -1433,7 +1589,11 @@
             "sourceTime": "35.69Y",
             "meet": "OMPA_2025",
             "age": 10,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2026-05-20",
@@ -1442,7 +1602,11 @@
             "sourceTime": "35.48Y",
             "meet": "MEAD_TTRIALS_05202026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-03",
@@ -1451,7 +1615,11 @@
             "sourceTime": "33.40Y",
             "meet": "CCC_MEAD_AT_SH_06032026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-10",
@@ -1460,7 +1628,11 @@
             "sourceTime": "35.18Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-13",
@@ -1469,7 +1641,11 @@
             "sourceTime": "34.57Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-17",
@@ -1487,7 +1663,11 @@
             "sourceTime": "33.32Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-28",
@@ -1496,7 +1676,11 @@
             "sourceTime": "34.49Y",
             "meet": "BOTTOMS_UP_2026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-07-11",
@@ -1505,7 +1689,11 @@
             "sourceTime": "33.62Y",
             "meet": "OMSC_MEAD_AT_MRSC_07112026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           }
         ],
         "breaststroke": [
@@ -1633,7 +1821,11 @@
             "sourceTime": "51.54Y",
             "meet": "OCC_AT_MEAD_07202024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-24",
@@ -1642,7 +1834,11 @@
             "sourceTime": "52.46Y",
             "meet": "MIRA_AT_MEAD_07242024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-04",
@@ -1660,7 +1856,11 @@
             "sourceTime": "46.99Y",
             "meet": "SLEEPYB_2025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2025-07-23",
@@ -1669,7 +1869,11 @@
             "sourceTime": "51.59Y",
             "meet": "MEAD_INTRSQD_07232025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -1723,7 +1927,11 @@
             "sourceTime": "45.66Y",
             "meet": "OMSC_MEAD_AT_MRSC_07112026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           }
         ],
         "backstroke": [
@@ -1734,7 +1942,11 @@
             "sourceTime": "37.98Y",
             "meet": "MEAD_AT_OCC_07172021",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2021-07-21",
@@ -1743,7 +1955,11 @@
             "sourceTime": "35.01Y",
             "meet": "MEAD_INTRSQD_07212021",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2021-08-01",
@@ -1752,7 +1968,11 @@
             "sourceTime": "32.22Y",
             "meet": "OMPA_2021",
             "age": 6,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2022-05-15",
@@ -1797,7 +2017,11 @@
             "sourceTime": "27.20Y",
             "meet": "BOTTOMS_UP_2022",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2022-07-10",
@@ -1851,7 +2075,11 @@
             "sourceTime": "27.94M",
             "meet": "MEAD_AT_CCC_06032023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-10",
@@ -1860,7 +2088,11 @@
             "sourceTime": "27.04Y",
             "meet": "MIRA_AT_MEAD_06102023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-14",
@@ -1869,7 +2101,11 @@
             "sourceTime": "24.82Y",
             "meet": "MEAD_AT_MCC_06142023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-17",
@@ -1878,7 +2114,11 @@
             "sourceTime": "26.16Y",
             "meet": "PARK_AT_MEAD_06172023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-06-21",
@@ -1896,7 +2136,11 @@
             "sourceTime": "26.47Y",
             "meet": "MEADOW_MINI_2023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-12",
@@ -1905,7 +2149,11 @@
             "sourceTime": "24.93Y",
             "meet": "SH_AT_MEAD_07122023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-15",
@@ -1914,7 +2162,11 @@
             "sourceTime": "25.37Y",
             "meet": "MEAD_AT_OCC_07152023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-19",
@@ -1923,7 +2175,11 @@
             "sourceTime": "24.96Y",
             "meet": "MEAD_INTRSQD_07192023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-30",
@@ -1932,7 +2188,11 @@
             "sourceTime": "23.48Y",
             "meet": "OMPA_2023",
             "age": 8,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2024-05-19",
@@ -1977,7 +2237,11 @@
             "sourceTime": "47.93Y",
             "meet": "MEAD_AT_PARK_06222024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-17",
@@ -1986,7 +2250,11 @@
             "sourceTime": "47.29Y",
             "meet": "MEAD_AT_SH_07172024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-20",
@@ -2004,7 +2272,11 @@
             "sourceTime": "47.75Y",
             "meet": "SLEEPYB_2024",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2024-07-24",
@@ -2022,7 +2294,11 @@
             "sourceTime": "48.22Y",
             "meet": "OMPA_2024",
             "age": 9,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-07",
@@ -2031,7 +2307,11 @@
             "sourceTime": "46.75Y",
             "meet": "MEAD_OMSC_AT_MVP_06072025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-14",
@@ -2040,7 +2320,11 @@
             "sourceTime": "43.84Y",
             "meet": "MVP_OMSC_AT_MEAD_06142025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2025-06-18",
@@ -2049,7 +2333,11 @@
             "sourceTime": "46.01Y",
             "meet": "MEAD_AT_MVP_06182025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-21",
@@ -2058,7 +2346,11 @@
             "sourceTime": "46.93Y",
             "meet": "PARK_AT_MEAD_06212025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-19",
@@ -2067,7 +2359,11 @@
             "sourceTime": "45.91Y",
             "meet": "MEAD_AT_OCC_07192025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -2085,7 +2381,11 @@
             "sourceTime": "43.01Y",
             "meet": "OMPA_2025",
             "age": 10,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2026-05-20",
@@ -2112,7 +2412,11 @@
             "sourceTime": "41.98Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-20",
@@ -2121,7 +2425,11 @@
             "sourceTime": "39.69Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-07-08",
@@ -2130,7 +2438,11 @@
             "sourceTime": "40.82Y",
             "meet": "MVP_AT_MEAD_07082026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-07-11",
@@ -2139,7 +2451,11 @@
             "sourceTime": "41.09Y",
             "meet": "OMSC_MEAD_AT_MRSC_07112026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           }
         ],
         "butterfly": [
@@ -2150,7 +2466,11 @@
             "sourceTime": "24.03Y",
             "meet": "PARK_AT_MEAD_06172023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-15",
@@ -2159,7 +2479,11 @@
             "sourceTime": "23.47Y",
             "meet": "MEAD_AT_OCC_07152023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-19",
@@ -2168,7 +2492,11 @@
             "sourceTime": "24.97Y",
             "meet": "MEAD_INTRSQD_07192023",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-30",
@@ -2177,7 +2505,11 @@
             "sourceTime": "25.46Y",
             "meet": "OMPA_2023",
             "age": 8,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-05-19",
@@ -2240,7 +2572,11 @@
             "sourceTime": "43.77Y",
             "meet": "MEAD_AT_MVP_06182025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-21",
@@ -2258,7 +2594,11 @@
             "sourceTime": "44.09Y",
             "meet": "SH_AT_MEAD_07162025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-19",
@@ -2267,7 +2607,11 @@
             "sourceTime": "46.59Y",
             "meet": "MEAD_AT_OCC_07192025",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -2285,7 +2629,11 @@
             "sourceTime": "43.29Y",
             "meet": "OMPA_2025",
             "age": 10,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -2303,7 +2651,11 @@
             "sourceTime": "41.44Y",
             "meet": "CCC_MEAD_AT_SH_06032026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-06-10",
@@ -2330,7 +2682,11 @@
             "sourceTime": "39.04Y",
             "meet": "BOTTOMS_UP_2026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           },
           {
             "date": "2026-07-08",
@@ -2339,7 +2695,11 @@
             "sourceTime": "39.04Y",
             "meet": "MVP_AT_MEAD_07082026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           }
         ],
         "individual-medley": [
@@ -2359,7 +2719,11 @@
             "sourceTime": "1:29.10Y",
             "meet": "BOTTOMS_UP_2026",
             "age": 11,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "11-12 Bronze"
+            }
           }
         ]
       }
@@ -2422,7 +2786,11 @@
             "sourceTime": "30.16Y",
             "meet": "MIRA_AT_MEAD_06042022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-06-11",
@@ -2440,7 +2808,11 @@
             "sourceTime": "29.65Y",
             "meet": "MRSC_AT_MEAD_06152022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-06-22",
@@ -2449,7 +2821,11 @@
             "sourceTime": "27.48Y",
             "meet": "MEAD_AT_SH_06222022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-13",
@@ -2458,7 +2834,11 @@
             "sourceTime": "28.34Y",
             "meet": "MVP_AT_MEAD_07132022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-16",
@@ -2467,7 +2847,11 @@
             "sourceTime": "28.04Y",
             "meet": "MEAD_AT_OCC_07162022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-20",
@@ -2476,7 +2860,11 @@
             "sourceTime": "27.81Y",
             "meet": "MEAD_INTRSQD_07202022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-30",
@@ -2485,7 +2873,11 @@
             "sourceTime": "28.87Y",
             "meet": "OMPA_2022",
             "age": 6,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2023-05-13",
@@ -2566,7 +2958,11 @@
             "sourceTime": "21.92Y",
             "meet": "SH_AT_MEAD_07122023",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-15",
@@ -2584,7 +2980,11 @@
             "sourceTime": "21.25Y",
             "meet": "SLEEPYB_2023",
             "age": 7,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2023-07-19",
@@ -2602,7 +3002,11 @@
             "sourceTime": "21.97Y",
             "meet": "OMPA_2023",
             "age": 7,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-05-19",
@@ -2611,7 +3015,11 @@
             "sourceTime": "21.72Y",
             "meet": "MEAD_TTRIALS_05192024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-08",
@@ -2620,7 +3028,11 @@
             "sourceTime": "20.81Y",
             "meet": "CCC_AT_MEAD_06082024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-12",
@@ -2629,7 +3041,11 @@
             "sourceTime": "20.60Y",
             "meet": "MIRA_AT_MEAD_06122024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-15",
@@ -2638,7 +3054,11 @@
             "sourceTime": "20.06Y",
             "meet": "SPBR_AT_MEAD_06152024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-19",
@@ -2647,7 +3067,11 @@
             "sourceTime": "21.50Y",
             "meet": "MEAD_AT_MRSC_06192024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-22",
@@ -2656,7 +3080,11 @@
             "sourceTime": "20.75Y",
             "meet": "MEAD_AT_PARK_06222024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-10",
@@ -2665,7 +3093,11 @@
             "sourceTime": "21.57Y",
             "meet": "MCC_AT_MEAD_07102024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-14",
@@ -2674,7 +3106,11 @@
             "sourceTime": "21.71Y",
             "meet": "MEADOW_MINI_2024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-17",
@@ -2683,7 +3119,11 @@
             "sourceTime": "20.53Y",
             "meet": "MEAD_AT_SH_07172024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-20",
@@ -2692,7 +3132,11 @@
             "sourceTime": "20.62Y",
             "meet": "OCC_AT_MEAD_07202024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-21",
@@ -2701,7 +3145,11 @@
             "sourceTime": "19.59Y",
             "meet": "SLEEPYB_2024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-08-03",
@@ -2710,7 +3158,11 @@
             "sourceTime": "20.57Y",
             "meet": "OMPA_2024",
             "age": 8,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2025-06-04",
@@ -2836,7 +3288,11 @@
             "sourceTime": "39.70Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-13",
@@ -2845,7 +3301,11 @@
             "sourceTime": "40.91Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-20",
@@ -2863,7 +3323,11 @@
             "sourceTime": "39.23Y",
             "meet": "MCC_AT_MEAD_06242026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-07-11",
@@ -2872,7 +3336,11 @@
             "sourceTime": "38.31Y",
             "meet": "OMSC_MEAD_AT_MRSC_07112026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           }
         ],
         "breaststroke": [
@@ -3018,7 +3486,11 @@
             "sourceTime": "27.61Y",
             "meet": "MEAD_TTRIALS_05192024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-05",
@@ -3027,7 +3499,11 @@
             "sourceTime": "26.75Y",
             "meet": "LTST_AT_MEAD_06052024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-15",
@@ -3036,7 +3512,11 @@
             "sourceTime": "26.16Y",
             "meet": "SPBR_AT_MEAD_06152024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-10",
@@ -3045,7 +3525,11 @@
             "sourceTime": "27.50Y",
             "meet": "MCC_AT_MEAD_07102024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-20",
@@ -3054,7 +3538,11 @@
             "sourceTime": "25.12Y",
             "meet": "OCC_AT_MEAD_07202024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2024-07-24",
@@ -3063,7 +3551,11 @@
             "sourceTime": "25.48Y",
             "meet": "MIRA_AT_MEAD_07242024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2025-06-04",
@@ -3072,7 +3564,11 @@
             "sourceTime": "49.79Y",
             "meet": "MEAD_OMSC_AT_MVP_06042025",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-06-14",
@@ -3099,7 +3595,11 @@
             "sourceTime": "51.78Y",
             "meet": "PARK_AT_MEAD_06212025",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-09",
@@ -3126,7 +3626,11 @@
             "sourceTime": "51.64Y",
             "meet": "SLEEPYB_2025",
             "age": 9,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -3144,7 +3648,11 @@
             "sourceTime": "52.21Y",
             "meet": "OMPA_2025",
             "age": 9,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -3153,7 +3661,11 @@
             "sourceTime": "50.33Y",
             "meet": "MEAD_TTRIALS_05202026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-06",
@@ -3162,7 +3674,11 @@
             "sourceTime": "47.53Y",
             "meet": "MEAD_CCC_AT_SH_06062026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2026-06-10",
@@ -3171,7 +3687,11 @@
             "sourceTime": "47.45Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2026-06-13",
@@ -3180,7 +3700,11 @@
             "sourceTime": "49.37Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-20",
@@ -3189,7 +3713,11 @@
             "sourceTime": "49.54Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-07-08",
@@ -3198,7 +3726,11 @@
             "sourceTime": "45.90Y",
             "meet": "MVP_AT_MEAD_07082026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           },
           {
             "date": "2026-07-11",
@@ -3207,7 +3739,11 @@
             "sourceTime": "47.44Y",
             "meet": "OMSC_MEAD_AT_MRSC_07112026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "9-10 Silver"
+            }
           }
         ],
         "backstroke": [
@@ -3263,7 +3799,11 @@
             "sourceTime": "36.42Y",
             "meet": "MIRA_AT_MEAD_06042022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-06-11",
@@ -3272,7 +3812,11 @@
             "sourceTime": "36.12Y",
             "meet": "CCC_AT_MEAD_06112022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-06-15",
@@ -3281,7 +3825,11 @@
             "sourceTime": "33.63Y",
             "meet": "MRSC_AT_MEAD_06152022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-06-22",
@@ -3290,7 +3838,11 @@
             "sourceTime": "35.90Y",
             "meet": "MEAD_AT_SH_06222022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-06",
@@ -3299,7 +3851,11 @@
             "sourceTime": "33.28Y",
             "meet": "MEAD_AT_PARK_07062022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-10",
@@ -3308,7 +3864,11 @@
             "sourceTime": "36.03Y",
             "meet": "MEADOW_MINI_2022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-13",
@@ -3317,7 +3877,11 @@
             "sourceTime": "36.46Y",
             "meet": "MVP_AT_MEAD_07132022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-16",
@@ -3335,7 +3899,11 @@
             "sourceTime": "35.12Y",
             "meet": "MEAD_INTRSQD_07202022",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2022-07-31",
@@ -3344,7 +3912,11 @@
             "sourceTime": "33.37Y",
             "meet": "OMPA_2022",
             "age": 6,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2023-06-10",
@@ -3452,7 +4024,11 @@
             "sourceTime": "26.22Y",
             "meet": "OMPA_2023",
             "age": 7,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-05-19",
@@ -3488,7 +4064,11 @@
             "sourceTime": "27.26Y",
             "meet": "MEAD_AT_MRSC_06192024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-17",
@@ -3497,7 +4077,11 @@
             "sourceTime": "26.50Y",
             "meet": "MEAD_AT_SH_07172024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-21",
@@ -3506,7 +4090,11 @@
             "sourceTime": "26.77Y",
             "meet": "SLEEPYB_2024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2025-06-07",
@@ -3551,7 +4139,11 @@
             "sourceTime": "48.14Y",
             "meet": "OMPA_2025",
             "age": 9,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -3569,7 +4161,11 @@
             "sourceTime": "48.04Y",
             "meet": "MEAD_CCC_AT_SH_06062026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-10",
@@ -3578,7 +4174,11 @@
             "sourceTime": "47.91Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-13",
@@ -3587,7 +4187,11 @@
             "sourceTime": "48.67Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-17",
@@ -3596,7 +4200,11 @@
             "sourceTime": "47.89Y",
             "meet": "MEAD_AT_PARK_06172026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-20",
@@ -3605,7 +4213,11 @@
             "sourceTime": "47.04Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           },
           {
             "date": "2026-06-24",
@@ -3614,7 +4226,11 @@
             "sourceTime": "47.04Y",
             "meet": "MCC_AT_MEAD_06242026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           }
         ],
         "butterfly": [
@@ -3634,7 +4250,11 @@
             "sourceTime": "25.45Y",
             "meet": "LTST_AT_MEAD_06052024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-08",
@@ -3643,7 +4263,11 @@
             "sourceTime": "25.48Y",
             "meet": "CCC_AT_MEAD_06082024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-12",
@@ -3652,7 +4276,11 @@
             "sourceTime": "24.48Y",
             "meet": "MIRA_AT_MEAD_06122024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-15",
@@ -3661,7 +4289,11 @@
             "sourceTime": "22.12Y",
             "meet": "SPBR_AT_MEAD_06152024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2024-06-19",
@@ -3670,7 +4302,11 @@
             "sourceTime": "25.42Y",
             "meet": "MEAD_AT_MRSC_06192024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-06-22",
@@ -3679,7 +4315,11 @@
             "sourceTime": "23.80Y",
             "meet": "MEAD_AT_PARK_06222024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-10",
@@ -3688,7 +4328,11 @@
             "sourceTime": "22.90Y",
             "meet": "MCC_AT_MEAD_07102024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2024-07-14",
@@ -3697,7 +4341,11 @@
             "sourceTime": "23.52Y",
             "meet": "MEADOW_MINI_2024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-07-20",
@@ -3724,7 +4372,11 @@
             "sourceTime": "21.85Y",
             "meet": "OMPA_2024",
             "age": 8,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2025-06-07",
@@ -3816,7 +4468,11 @@
             "sourceTime": "1:56.87Y",
             "meet": "MEAD_AT_SH_07172024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "7-8 Bronze"
+            }
           },
           {
             "date": "2024-08-02",
@@ -3825,7 +4481,11 @@
             "sourceTime": "1:53.13Y",
             "meet": "OMPA_2024",
             "age": 8,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "7-8 Silver"
+            }
           },
           {
             "date": "2026-05-20",
@@ -3834,7 +4494,11 @@
             "sourceTime": "1:42.93Y",
             "meet": "MEAD_TTRIALS_05202026",
             "age": 10,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "9-10 Bronze"
+            }
           }
         ]
       }
@@ -3852,7 +4516,11 @@
             "sourceTime": "29.82Y",
             "meet": "MEAD_OMSC_AT_MVP_06042025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-06-11",
@@ -3870,7 +4538,11 @@
             "sourceTime": "28.61Y",
             "meet": "MVP_OMSC_AT_MEAD_06142025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-06-18",
@@ -3888,7 +4560,11 @@
             "sourceTime": "30.76Y",
             "meet": "PARK_AT_MEAD_06212025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-09",
@@ -3897,7 +4573,11 @@
             "sourceTime": "29.04Y",
             "meet": "MRSC_AT_MEAD_07092025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-13",
@@ -3915,7 +4595,11 @@
             "sourceTime": "30.85Y",
             "meet": "SH_AT_MEAD_07162025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-19",
@@ -3924,7 +4608,11 @@
             "sourceTime": "26.98Y",
             "meet": "MEAD_AT_OCC_07192025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-20",
@@ -3933,7 +4621,11 @@
             "sourceTime": "28.91Y",
             "meet": "SLEEPYB_2025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -3942,7 +4634,11 @@
             "sourceTime": "31.30Y",
             "meet": "MEAD_INTRSQD_07232025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-08-02",
@@ -3951,7 +4647,11 @@
             "sourceTime": "25.31Y",
             "meet": "OMPA_2025",
             "age": 5,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -3960,7 +4660,11 @@
             "sourceTime": "22.29Y",
             "meet": "MEAD_TTRIALS_05202026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-06",
@@ -3969,7 +4673,11 @@
             "sourceTime": "23.36Y",
             "meet": "MEAD_CCC_AT_SH_06062026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-10",
@@ -3978,7 +4686,11 @@
             "sourceTime": "22.50Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-13",
@@ -3987,7 +4699,11 @@
             "sourceTime": "23.01Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-20",
@@ -3996,7 +4712,11 @@
             "sourceTime": "22.59Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           }
         ],
         "breaststroke": [
@@ -4043,7 +4763,11 @@
             "sourceTime": "37.58Y",
             "meet": "MEAD_AT_PARK_06172026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2026-06-24",
@@ -4052,7 +4776,11 @@
             "sourceTime": "35.32Y",
             "meet": "MCC_AT_MEAD_06242026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2026-07-08",
@@ -4061,7 +4789,11 @@
             "sourceTime": "33.40Y",
             "meet": "MVP_AT_MEAD_07082026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           }
         ],
         "backstroke": [
@@ -4126,7 +4858,11 @@
             "sourceTime": "35.97Y",
             "meet": "SLEEPYB_2025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-23",
@@ -4135,7 +4871,11 @@
             "sourceTime": "34.85Y",
             "meet": "MEAD_INTRSQD_07232025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2026-05-20",
@@ -4144,7 +4884,11 @@
             "sourceTime": "31.90Y",
             "meet": "MEAD_TTRIALS_05202026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-06",
@@ -4153,7 +4897,11 @@
             "sourceTime": "33.05Y",
             "meet": "MEAD_CCC_AT_SH_06062026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2026-06-10",
@@ -4162,7 +4910,11 @@
             "sourceTime": "28.60Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-13",
@@ -4171,7 +4923,11 @@
             "sourceTime": "30.61Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-20",
@@ -4180,7 +4936,11 @@
             "sourceTime": "30.46Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           }
         ],
         "butterfly": [
@@ -4191,7 +4951,11 @@
             "sourceTime": "35.08Y",
             "meet": "MRSC_AT_MEAD_07092025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-13",
@@ -4200,7 +4964,11 @@
             "sourceTime": "36.07Y",
             "meet": "SPBRK_PENT_2025",
             "age": 5,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2025-07-16",
@@ -4245,7 +5013,11 @@
             "sourceTime": "29.91Y",
             "meet": "OMPA_2025",
             "age": 5,
-            "type": "P"
+            "type": "P",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-05-20",
@@ -4254,7 +5026,11 @@
             "sourceTime": "28.83Y",
             "meet": "MEAD_TTRIALS_05202026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-10",
@@ -4263,7 +5039,11 @@
             "sourceTime": "31.26Y",
             "meet": "CCC_AT_MEAD_06102026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "bronze",
+              "label": "6&U Bronze"
+            }
           },
           {
             "date": "2026-06-13",
@@ -4272,7 +5052,11 @@
             "sourceTime": "30.89Y",
             "meet": "OMSC_AT_MEAD_06132026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-20",
@@ -4281,7 +5065,11 @@
             "sourceTime": "29.05Y",
             "meet": "MEAD_AT_MRSC_06202026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-06-24",
@@ -4290,7 +5078,11 @@
             "sourceTime": "30.67Y",
             "meet": "MCC_AT_MEAD_06242026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           },
           {
             "date": "2026-07-08",
@@ -4299,7 +5091,11 @@
             "sourceTime": "28.02Y",
             "meet": "MVP_AT_MEAD_07082026",
             "age": 6,
-            "type": "F"
+            "type": "F",
+            "standard": {
+              "level": "silver",
+              "label": "6&U Silver"
+            }
           }
         ]
       }

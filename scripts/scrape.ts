@@ -1,7 +1,7 @@
 import { chromium, type Page } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
-import { eventFromLabel, parseTimeToSeconds, type EventKey, type Swim, type Swimmer } from '../src/lib/swim';
+import { eventFromLabel, parseTimeToSeconds, type EventKey, type Swim, type Swimmer, type TimeStandard } from '../src/lib/swim';
 
 export const SOURCES = [
   { id: 'oliver', name: 'Oliver', url: 'https://www.acornswim.com/Database/search/indsearch.php?swimmernames=MARTIN%2C+OLIVER+%28MEAD%29&year%5B%5D=2026&year%5B%5D=2025&year%5B%5D=2024&year%5B%5D=2023&year%5B%5D=2022&year%5B%5D=2021&year%5B%5D=2020&year%5B%5D=2019&year%5B%5D=2018&yearselect=more&league=OMPA' },
@@ -10,7 +10,8 @@ export const SOURCES = [
   { id: 'maggie', name: 'Maggie', url: 'https://www.acornswim.com/Database/search/indsearch.php?swimmernames=MARTIN%2C+MAGGIE+%28MEAD%29&year%5B%5D=2026&year%5B%5D=2025&year%5B%5D=2024&year%5B%5D=2023&year%5B%5D=2022&year%5B%5D=2021&year%5B%5D=2020&year%5B%5D=2019&yearselect=more&league=ompa' },
 ] as const;
 
-type RawSection = { label: string; rows: string[][] };
+type RawRow = string[] | { cells: string[]; standard?: TimeStandard };
+type RawSection = { label: string; rows: RawRow[] };
 
 export function parseSections(source: { id: string; name: string; url: string }, sections: RawSection[]): Swimmer {
   const events: Partial<Record<EventKey, Swim[]>> = {};
@@ -18,7 +19,9 @@ export function parseSections(source: { id: string; name: string; url: string },
   for (const section of sections) {
     const eventInfo = eventFromLabel(section.label);
     if (!eventInfo) continue;
-    const swims = section.rows.flatMap((cells) => {
+    const swims = section.rows.flatMap((rawRow) => {
+      const cells = Array.isArray(rawRow) ? rawRow : rawRow.cells;
+      const standard = Array.isArray(rawRow) ? undefined : rawRow.standard;
       const convertedTime = parseTimeToSeconds(cells[1] ?? '');
       const date = parseDate(cells[4] ?? '');
       const age = Number(cells[5]);
@@ -31,6 +34,7 @@ export function parseSections(source: { id: string; name: string; url: string },
         meet: cells[3]?.trim() ?? '',
         age,
         type: cells[6]?.trim() ?? '',
+        ...(standard ? { standard } : {}),
       }];
     });
     if (swims.length) events[eventInfo.event] = [...(events[eventInfo.event] ?? []), ...swims];
@@ -54,8 +58,14 @@ async function readSections(page: Page): Promise<RawSection[]> {
         sections.push(current);
         continue;
       }
-      const cells = Array.from(row.querySelectorAll('td')).map((cell) => cell.textContent?.replace(/\s+/g, ' ').trim() ?? '');
-      if (current && cells.length === 9 && /^\d{2}\/\d{2}\/\d{4}$/.test(cells[4])) current.rows.push(cells);
+      const cellElements = Array.from(row.querySelectorAll('td'));
+      const cells = cellElements.map((cell) => cell.textContent?.replace(/\s+/g, ' ').trim() ?? '');
+      const standardCell = cellElements[0];
+      const level = ['bronze', 'silver', 'gold'].find((candidate) => standardCell?.classList.contains(candidate));
+      const standard = level
+        ? { level: level as TimeStandard['level'], label: standardCell?.getAttribute('title')?.trim() ?? '' }
+        : undefined;
+      if (current && cells.length === 9 && /^\d{2}\/\d{2}\/\d{4}$/.test(cells[4])) current.rows.push({ cells, ...(standard ? { standard } : {}) });
     }
     return sections;
   });

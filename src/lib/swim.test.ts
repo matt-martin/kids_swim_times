@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventFromLabel, formatTime, normalizePoints, parseTimeToSeconds } from './swim';
+import { eventFromLabel, formatTime, normalizePoints, parseTimeToSeconds, standardFromCell } from './swim';
 
 describe('swim time helpers', () => {
   it.each([
@@ -30,5 +30,10 @@ describe('swim time helpers', () => {
       { comparableSeconds: 30, isSplit: false },
       { comparableSeconds: 24, isSplit: true },
     ]);
+  });
+
+  it('normalizes time standard cells while ignoring unmarked cells', () => {
+    expect(standardFromCell('bronze', '11-12 Bronze')).toEqual({ level: 'bronze', label: '11-12 Bronze' });
+    expect(standardFromCell('', '')).toBeUndefined();
   });
 });

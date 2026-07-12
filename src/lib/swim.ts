@@ -3,6 +3,8 @@ export const EVENT_KEYS = ['freestyle', 'backstroke', 'breaststroke', 'butterfly
 export type EventKey = (typeof EVENT_KEYS)[number];
 // Keep this open-ended because the database includes events such as 100 IM.
 export type Distance = number;
+export type StandardLevel = 'bronze' | 'silver' | 'gold';
+export type TimeStandard = { level: StandardLevel; label: string };
 
 export type Swim = {
   date: string;
@@ -12,6 +14,7 @@ export type Swim = {
   meet: string;
   age: number;
   type: string;
+  standard?: TimeStandard;
 };
 
 export type Swimmer = {
@@ -33,6 +36,21 @@ const EVENT_LABELS: Record<EventKey, string> = {
   butterfly: 'Butterfly',
   'individual-medley': 'Individual medley',
 };
+
+const STANDARD_COLORS: Record<StandardLevel, string> = {
+  bronze: '#b8794a',
+  silver: '#93a4ad',
+  gold: '#d8a72b',
+};
+
+export function standardColor(level: StandardLevel): string {
+  return STANDARD_COLORS[level];
+}
+
+export function standardFromCell(className: string, title: string): TimeStandard | undefined {
+  const level = className.toLowerCase().split(/\s+/).find((value): value is StandardLevel => value in STANDARD_COLORS);
+  return level ? { level, label: title.trim() } : undefined;
+}
 
 export function eventLabel(event: EventKey): string {
   return EVENT_LABELS[event];

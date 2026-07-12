@@ -5,6 +5,8 @@ import {
   formatTime,
   normalizePoints,
   type EventKey,
+  standardColor,
+  type StandardLevel,
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
@@ -128,9 +130,13 @@ function render() {
 function chartCard(event: EventKey, swims: NonNullable<Swimmer['events'][EventKey]>, mode: ChartMode) {
   const hasData = swims.length > 0;
   const series = chartSeries(swims, mode);
+  const standards = [...new Set(swims.flatMap((swim) => swim.standard ? [swim.standard.level] : []))] as StandardLevel[];
+  const standardLegend = standards.length
+    ? `<div class="standard-legend">${standards.map((level) => `<span><i class="standard-star ${level}">★</i>${level} standard</span>`).join('')}</div>`
+    : '';
   return `<article class="chart-card ${hasData ? '' : 'empty-card'}">
     <div class="card-heading"><div><p class="card-kicker">${hasData ? `${swims.length} swims tracked` : 'Not in the record yet'}</p><h3>${eventLabel(event)}</h3></div><span class="event-badge">${event === 'individual-medley' ? 'IM' : event.slice(0, 2).toUpperCase()}</span></div>
-    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div><div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
+    ${hasData ? `<div class="legend">${series.map((item) => `<span><i class="legend-line ${item.color} ${item.dashed ? 'dashed' : ''}"></i>${item.label}</span>`).join('')}</div>${standardLegend}<div class="chart-wrap"><canvas data-chart="${event}" aria-label="${eventLabel(event)} ${mode} chart over time"></canvas></div>` : `<div class="empty-content"><span class="empty-icon">✦</span><p>There aren’t any ${eventLabel(event).toLowerCase()} results in the current record. If this event makes an appearance, it will join the story here.</p></div>`}
   </article>`;
 }
 
@@ -145,8 +151,11 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
     data: item.values,
     borderColor: item.color === 'coral' ? '#ef765d' : '#276c83',
     backgroundColor: item.color === 'coral' ? '#ef765d' : '#276c83',
-    pointRadius: 3.5,
-    pointHoverRadius: 6,
+    pointStyle: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? 'star' : 'circle'),
+    pointBackgroundColor: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? standardColor(point.standard.level) : item.color === 'coral' ? '#ef765d' : '#276c83'),
+    pointBorderColor: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? standardColor(point.standard.level) : item.color === 'coral' ? '#ef765d' : '#276c83'),
+    pointRadius: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? 6 : 3.5),
+    pointHoverRadius: points.map((point) => pointBelongsToSeries(item.id, point) && point.standard ? 8 : 6),
     borderWidth: 2.5,
     borderDash: item.dashed ? [7, 6] : [],
     tension: 0.22,
@@ -192,6 +201,12 @@ function createChart(event: EventKey, swims: NonNullable<Swimmer['events'][Event
       },
     },
   });
+}
+
+function pointBelongsToSeries(seriesId: string, point: SwimPoint): boolean {
+  if (seriesId === 'speed') return true;
+  if (seriesId === '50' || seriesId === '50-per-25') return point.distance === 50;
+  return point.distance === Number(seriesId);
 }
 
 async function loadData() {

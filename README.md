@@ -22,4 +22,4 @@ npm test
 npm run build
 ```
 
-The scraper lives in [`scripts/scrape.ts`](scripts/scrape.ts). It uses Playwright to load each Acorn Swim Database page, walks the site’s event sections, skips non-times such as DQs, normalizes dates and converted times, and writes a readable checked-in JSON file. To add another swimmer, add a source entry to `SOURCES` and re-run `npm run scrape`.
+The scraper lives in [`scripts/scrape.ts`](scripts/scrape.ts). It uses Playwright to load each Acorn Swim Database page, walks the site’s event sections, skips non-times such as DQs, normalizes dates and converted times, retains bronze/silver/gold time standards, and writes a readable checked-in JSON file. Standard-bearing results appear as colored stars in the charts. To add another swimmer, add a source entry to `SOURCES` and re-run `npm run scrape`.

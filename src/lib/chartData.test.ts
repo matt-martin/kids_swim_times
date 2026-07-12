@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { chartAxis, chartSeries } from './chartData';
-import type { Swim } from './swim';
+import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
   { date: '2024-06-01', seconds: 30, distance: 25, sourceTime: '30.00Y', meet: 'A', age: 8, type: 'F' },
@@ -8,6 +8,10 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('maps time standards to their visual star colors', () => {
+    expect((['bronze', 'silver', 'gold'] as StandardLevel[]).map(standardColor)).toEqual(['#b8794a', '#93a4ad', '#d8a72b']);
+  });
+
   it('uses an ascending raw-time axis with zero at the x-axis', () => {
     expect(chartAxis('raw')).toEqual({ reverse: false, beginAtZero: true });
   });
