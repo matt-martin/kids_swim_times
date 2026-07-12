@@ -12,7 +12,7 @@ import {
   type SwimPoint,
   type Swimmer,
 } from './lib/swim';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartSeries, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails, type ChartMode } from './lib/chartData';
 import './styles.css';
 
 type AppData = { fetchedAt: string; swimmers: Swimmer[] };
@@ -20,7 +20,7 @@ type AppData = { fetchedAt: string; swimmers: Swimmer[] };
 const app = document.querySelector<HTMLDivElement>('#app')!;
 let data: AppData | null = null;
 let selectedId = '';
-let viewMode: ChartMode = 'speed';
+let viewMode: ChartMode = DEFAULT_CHART_MODE;
 let charts: Chart[] = [];
 let sharedHoverIndex: number | null = null;
 
@@ -155,12 +155,12 @@ function render() {
           <div>
             <p class="eyebrow">${swimmer.name}'s swim story</p>
             <h2>The long view.</h2>
-            <p class="story-subtitle">${viewMode === 'speed' ? 'Speed is measured in yards per second, so 25- and 50-yard swims share one natural scale.' : 'Raw view shows the actual 25-yard and 50-yard times, plus the 50-yard time divided by two for a fair comparison.'}</p>
+            <p class="story-subtitle">${viewMode === 'speed' ? 'Speed is measured in yards per second, so 25- and 50-yard swims share one natural scale.' : 'Times view shows the actual 25-yard and 50-yard times, plus the 50-yard time divided by two for a fair comparison.'}</p>
           </div>
           <div class="story-tools">
             <div class="view-toggle" role="group" aria-label="Chart view">
-              <button class="view-button ${viewMode === 'speed' ? 'selected' : ''}" data-mode="speed" aria-pressed="${viewMode === 'speed'}">Speed</button>
-              <button class="view-button ${viewMode === 'raw' ? 'selected' : ''}" data-mode="raw" aria-pressed="${viewMode === 'raw'}">Raw times</button>
+              <button class="view-button ${viewMode === 'speed' ? 'selected' : ''}" data-mode="speed" aria-pressed="${viewMode === 'speed'}">${chartModeLabel('speed')}</button>
+              <button class="view-button ${viewMode === 'raw' ? 'selected' : ''}" data-mode="raw" aria-pressed="${viewMode === 'raw'}">${chartModeLabel('raw')}</button>
             </div>
             <div class="stats" aria-label="Swim story summary">
             <div class="stat"><strong>${seasonCount || '—'}</strong><span>summer${seasonCount === 1 ? '' : 's'}</span></div>

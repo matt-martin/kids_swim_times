@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartSeries, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails } from './chartData';
+import { alignSeriesToTimeline, chartAxis, chartLineOptions, chartModeLabel, chartSeries, DEFAULT_CHART_MODE, eventMetrics, nearestTimelineIndex, seasonBands, timelineLabels, tooltipDetails } from './chartData';
 import { standardColor, type StandardLevel, type Swim } from './swim';
 
 const swims: Swim[] = [
@@ -8,6 +8,12 @@ const swims: Swim[] = [
 ];
 
 describe('chart series', () => {
+  it('defaults to Times and labels the mode toggle plainly', () => {
+    expect(DEFAULT_CHART_MODE).toBe('raw');
+    expect(chartModeLabel('raw')).toBe('Times');
+    expect(chartModeLabel('speed')).toBe('Speed');
+  });
+
   it('calculates best speed and best raw/comparable times per event', () => {
     expect(eventMetrics(swims)).toEqual({ bestSpeed: 1, best25: 30, best50: 50, best100: null, bestComparable: 25 });
     expect(eventMetrics([{ date: '2026-06-28', seconds: 89.1, distance: 100, sourceTime: '1:29.10Y', meet: 'B', age: 11, type: 'F' }])).toEqual({ bestSpeed: 100 / 89.1, best25: null, best50: null, best100: 89.1, bestComparable: 89.1 });

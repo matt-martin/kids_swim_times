@@ -1,6 +1,7 @@
 import { normalizePoints, type Swim } from './swim';
 
 export type ChartMode = 'speed' | 'raw';
+export const DEFAULT_CHART_MODE: ChartMode = 'raw';
 export type SeriesColor = 'coral' | 'blue';
 
 export type ChartSeries = {
@@ -12,6 +13,10 @@ export type ChartSeries = {
 };
 
 export type SeasonBand = { year: string; start: number; end: number; alternate: boolean };
+
+export function chartModeLabel(mode: ChartMode): string {
+  return mode === 'raw' ? 'Times' : 'Speed';
+}
 
 export function timelineLabels(swims: Swim[]): string[] {
   return [...new Set(swims.map((swim) => swim.date))].sort();
